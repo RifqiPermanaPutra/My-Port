@@ -1,0 +1,28 @@
+# Sistem operasi
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependensi (proyek ini tidak memakainya, tapi jaga-jaga)
+node_modules/
+package-lock.json
+
+# Berkas sementara
+*.log
+*.tmp
+.cache/
+
+# Folder tampung berkas mentah — isinya sudah disalin ke assets/img/projects/
+# dengan nama yang rapi. Tidak dipakai situs, jadi tidak perlu ikut terbit.
+image/
+
+# Konfigurasi server pengembangan lokal
+.claude/

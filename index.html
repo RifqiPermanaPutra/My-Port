@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rifqi Permana Putra — AI &amp; Frontend Developer</title>
+<meta name="description" content="Portofolio Rifqi Permana Putra — mahasiswa Teknik Informatika Universitas Islam Riau yang tertarik pada sistem AI, pengembangan web, dan desain antarmuka.">
+<meta name="theme-color" content="#FFF300">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23FFF300'/><path d='M20 22 L10 32 L20 42' stroke='%23111' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M44 22 L54 32 L44 42' stroke='%2300DEFF' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M36 18 L28 46' stroke='%23111' stroke-width='6' stroke-linecap='round'/></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rifqi Permana Putra">
+<meta property="og:title" content="Rifqi Permana Putra — AI &amp; Frontend Developer">
+<meta property="og:description" content="Lima proyek: sistem aduan ICT Pertamina, chatbot 167 peraturan daerah, asisten AI multi-RAG, platform event kampus, dan pembukuan toko.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=17">
+</head>
+<body>
+
+<!-- ========== LOADER ========== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <div class="loader__icon">
+      <svg viewBox="0 0 120 110">
+        <g stroke="currentColor" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M38 34 L16 55 L38 76"/>
+          <path d="M82 34 L104 55 L82 76"/>
+          <path d="M68 26 L52 84"/>
+        </g>
+      </svg>
+    </div>
+    <p class="loader__title" id="loaderTitle">RIFQI PERMANA PUTRA</p>
+    <p class="loader__bar">
+      <span class="loader__bar-text">MEMUAT<span class="loader__dots"><i>.</i><i>.</i><i>.</i></span></span>
+    </p>
+  </div>
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header" id="siteHeader">
+  <a class="site-logo" href="#top" aria-label="Rifqi Permana Putra — ke atas">
+    <span class="site-logo__a">MY</span>
+    <span class="site-logo__b">PORTOFOLIO</span>
+  </a>
+  <div class="site-header__right">
+    <a class="btn-reserve" href="kontak.html">KONTAK</a>
+    <button class="site-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Buka menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== DRAWER NAV ========== -->
+<nav class="site-nav-drawer" id="navDrawer" hidden>
+  <div class="site-nav-drawer__bg"></div>
+  <p class="site-nav-drawer__sidecopy">BE GREATER, BE TOGETHER</p>
+  <ul class="site-nav-drawer__list">
+    <li><a href="#about"><em>01</em><b>ABOUT</b><span>Tentang Saya</span></a></li>
+    <li><a href="#prinsip"><em>02</em><b>PRINSIP</b><span>Cara Saya Menilai Kerja</span></a></li>
+    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Pengalaman</span></a></li>
+    <li><a href="#fokus"><em>04</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
+    <li><a href="proyek.html"><em>05</em><b>WORKS</b><span>Lima Proyek</span></a></li>
+    <li><a href="#carakerja"><em>06</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
+    <li><a href="#keahlian"><em>07</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
+    <li><a href="kontak.html"><em>08</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
+  </ul>
+  <div class="site-nav-drawer__foot">
+    <span>PEKANBARU · 2026</span>
+    <div class="site-nav-drawer__sns">
+      <a href="https://github.com/RifqiPermanaPutra" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/rifqi-permana-putra-9563072a1/" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+      <a href="https://instagram.com/r_vairagya" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ========== FIRST VIEW ========== -->
+<section class="fv" id="top">
+  <div class="fv__sky" aria-hidden="true"></div>
+  <div class="fv__scan" aria-hidden="true"></div>
+  <div class="fv__yellow" aria-hidden="true"></div>
+  <div class="fv__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <p class="fv__mark" aria-hidden="true">Portofolio</p>
+
+  <div class="deco-flower deco-flower--cw" aria-hidden="true"
+       style="bottom:8%;right:6%;width:clamp(70px,10vw,150px);color:rgba(17,17,17,.1)">
+    <svg viewBox="0 0 100 100"><use href="#deco-flower"/></svg>
+  </div>
+
+  <div class="fv__inner">
+    <p class="fv__eyebrow">TEKNIK INFORMATIKA · UNIVERSITAS ISLAM RIAU</p>
+    <h1 class="fv__title">
+      <span class="fv__title-a glitch" data-text="RIFQI">RIFQI</span>
+      <span class="fv__title-b">PERMANA PUTRA</span>
+    </h1>
+    <p class="fv__motto">BE GREATER, BE TOGETHER</p>
+    <p class="fv__lead">
+      Seorang mahasiswa Teknik Informatika yang tertarik pada sistem AI,
+      pengembangan web, dan desain antarmuka.
+    </p>
+    <div class="fv__meta">
+      <span class="fv__date">PEKANBARU</span>
+      <span class="fv__sep"></span>
+      <span class="fv__place">TERBUKA UNTUK MAGANG &amp; ENTRY-LEVEL</span>
+    </div>
+    <div class="fv__acts">
+      <a class="btn-guide" href="proyek.html">LIHAT PROYEK</a>
+      <a class="btn-more" href="kontak.html"><span>HUBUNGI SAYA</span></a>
+    </div>
+  </div>
+
+  <a class="fv__scroll" href="#about" aria-label="Gulir ke bawah"><span>SCROLL</span><i></i></a>
+</section>
+
+<!-- ========== CAROUSEL SOROTAN ========== -->
+<section class="banner" id="banner" aria-label="Sorotan proyek">
+  <div class="deco-flower deco-flower--a deco-flower--cw" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><use href="#deco-flower"/></svg>
+  </div>
+  <div class="deco-flower deco-flower--b deco-flower--tilt" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><use href="#deco-flower"/></svg>
+  </div>
+
+  <div class="banner__viewport" id="bannerViewport">
+    <ul class="banner__track" id="bannerTrack">
+      <li class="banner__slide">
+        <a class="banner__card" href="proyek.html#sigap">
+          <span class="banner__tag">KERJA PRAKTIK</span>
+          <p class="banner__title">SIGAP — layanan aduan ICT untuk Pertamina Field Lirik</p>
+          <p class="banner__date">RESPONS ~0,14 DETIK</p>
+        </a>
+      </li>
+      <li class="banner__slide">
+        <a class="banner__card" href="proyek.html#perda">
+          <span class="banner__tag">GRAPH RAG</span>
+          <p class="banner__title">Perda AI — chatbot 167 peraturan daerah Pekanbaru</p>
+          <p class="banner__date">38 PERDA · 129 PERWA</p>
+        </a>
+      </li>
+      <li class="banner__slide">
+        <a class="banner__card" href="proyek.html#valorant">
+          <span class="banner__tag">MULTI-RAG</span>
+          <p class="banner__title">Asisten AI dengan intent routing dan tiga vector store</p>
+          <p class="banner__date">LANGGRAPH · LANGSMITH</p>
+        </a>
+      </li>
+      <li class="banner__slide">
+        <a class="banner__card" href="proyek.html#kampushub">
+          <span class="banner__tag">FULL-STACK</span>
+          <p class="banner__title">KampusHub — event kampus dengan e-tiket QR</p>
+          <p class="banner__date">RBAC TIGA PERAN</p>
+        </a>
+      </li>
+      <li class="banner__slide">
+        <a class="banner__card" href="proyek.html#rekap">
+          <span class="banner__tag">DIPAKAI HARIAN</span>
+          <p class="banner__title">Rekap Keuangan — menggantikan buku catatan toko</p>
+          <p class="banner__date">SUDAH TAYANG</p>
+        </a>
+      </li>
+      <li class="banner__slide">
+        <a class="banner__card" href="perjalanan.html">
+          <span class="banner__tag">ORGANISASI</span>
+          <p class="banner__title">Kepala Divisi Kominfo HIMATIF UIR 2026/2027</p>
+          <p class="banner__date">NAIK DARI ANGGOTA</p>
+        </a>
+      </li>
+    </ul>
+
+    <button class="banner__arrow banner__arrow--prev" id="bannerPrev" type="button" aria-label="Sebelumnya"><span></span></button>
+    <button class="banner__arrow banner__arrow--next" id="bannerNext" type="button" aria-label="Berikutnya"><span></span></button>
+  </div>
+
+  <div class="banner__pager" id="bannerPager" role="tablist" aria-label="Pilih sorotan"></div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="sec about" id="about">
+  <div class="about__sky" aria-hidden="true"></div>
+  <div class="about__scan" aria-hidden="true"></div>
+  <div class="about__yellow" aria-hidden="true"></div>
+  <div class="about__bars" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+  <p class="about__mark" aria-hidden="true">Rifqi</p>
+
+  <div class="deco-spice deco-spice--about" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><use href="#spice-star"/></svg>
+  </div>
+
+  <div class="sec__inner">
+    <h2 class="sec__label" data-reveal>TENTANG SAYA</h2>
+    <p class="sec__head" data-reveal>
+      <span class="blockline">Membangun Yang Dipakai</span>
+      <span class="blockline">Bukan Sekadar Selesai</span>
+    </p>
+    <div class="sec__body" data-reveal>
+      <p>
+        Saya mahasiswa Teknik Informatika di Universitas Islam Riau, dengan fokus di
+        <span class="em">sistem AI berbasis retrieval</span>. Bukan sekadar memanggil API model
+        bahasa, tapi merancang bagaimana jawaban ditarik dari sumber yang benar — lalu
+        mengukur apakah hasilnya memang bisa dipercaya.
+      </p>
+      <p>
+        Di sisi lain saya membangun antarmukanya sendiri dengan React, TypeScript, dan
+        Tailwind. <span class="em">Empat dari lima proyek</span> saya kerjakan sampai ke
+        tampilannya, karena sistem yang tidak bisa dipakai orang awam belum menyelesaikan
+        apa pun.
+      </p>
+      <p>
+        Kelima proyek itu berangkat dari masalah yang benar-benar ada: pekerja lapangan
+        yang butuh bantuan teknis cepat, warga yang kesulitan mencari peraturan daerah,
+        dan orang tua saya yang masih mencatat keuangan toko di kertas.
+      </p>
+    </div>
+  </div>
+
+  <div class="about__collage" data-reveal>
+    <div class="about__card about__card--wide">
+      <img src="assets/img/projects/rifqi-1.jpg" alt="Rifqi Permana Putra" loading="lazy">
+    </div>
+    <div class="about__card about__card--up">
+      <img src="assets/img/projects/rifqi-2.jpg" alt="" loading="lazy">
+    </div>
+    <div class="about__card about__card--down">
+      <img src="assets/img/projects/rifqi-3.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ========== PERNYATAAN ========== -->
+<section class="tengahmalam" id="prinsip">
+  <div class="tengahmalam__static" aria-hidden="true"></div>
+  <div class="tengahmalam__inner">
+    <p class="tengahmalam__q" data-reveal>Model yang mengarang itu <em>gagal</em>, bukan kreatif.</p>
+    <p class="tengahmalam__t" data-reveal>
+      Karena itu setiap sistem AI yang saya bangun selalu menyertakan sumbernya,<br>
+      dan selalu saya ukur — dengan RAGAS, dengan LangSmith, dengan apa pun yang bisa membuktikan.
+    </p>
+    <a class="btn-guide" href="proyek.html">LIHAT BUKTINYA</a>
+  </div>
+</section>
+
+<!-- ========== FOKUS 01 — AI ========== -->
+<section class="ksys ksys--blaze" id="fokus">
+  <div class="ksys__bg" aria-hidden="true"></div>
+  <div class="ksys__silhouette" aria-hidden="true">
+    <svg viewBox="0 0 400 300"><use href="#art-graph"/></svg>
+  </div>
+  <div class="ksys__inner">
+    <div class="ksys__copy">
+      <h2 class="ksys__label" data-reveal>AI &amp; LLM<br><small>BIDANG UTAMA 01</small></h2>
+      <p class="ksys__head" data-reveal><span class="hl">Menarik Jawaban Dari Sumber</span></p>
+      <p class="ksys__body" data-reveal>
+        Saya membangun dua arsitektur retrieval yang berbeda. Pada Perda AI, pencarian
+        berjalan dua tahap: graf pengetahuan Neo4j menyaring dokumen yang relevan lebih
+        dulu, baru ChromaDB mencari secara semantik di dalamnya. Pada asisten Valorant,
+        pendekatannya lain — tiga vector store terpisah dengan intent routing, supaya
+        konteks satu topik tidak mencemari topik lain.
+      </p>
+      <a class="btn-more btn-more--dark" href="proyek.html#perda" data-reveal><span>SELENGKAPNYA</span></a>
+    </div>
+    <div class="ksys__art scatter" data-reveal>
+      <div class="scatter__item"><img src="assets/img/projects/valorant-rag-pipeline.png" alt="Alur pipeline RAG" loading="lazy"></div>
+      <div class="scatter__item"><img src="assets/img/projects/valorant-langgraph.png" alt="Graf alur LangGraph" loading="lazy"></div>
+      <div class="scatter__item"><img src="assets/img/projects/valorant-knowledge-base.png" alt="Basis pengetahuan" loading="lazy"></div>
+    </div>
+  </div>
+  <p class="ksys__bigtype" aria-hidden="true">RETRIEVAL</p>
+</section>
+
+<!-- ========== FOKUS 02 — FRONTEND ========== -->
+<section class="ksys ksys--sky">
+  <div class="ksys__panel">
+    <div class="ksys__silhouette" aria-hidden="true">
+      <svg viewBox="0 0 400 300"><use href="#art-code"/></svg>
+    </div>
+    <div class="ksys__inner ksys__inner--rev">
+      <div class="ksys__copy">
+        <h2 class="ksys__label" data-reveal>FRONTEND<br><small>BIDANG UTAMA 02</small></h2>
+        <p class="ksys__head" data-reveal><span class="hl">Selesai Kalau Sudah Dipakai</span></p>
+        <p class="ksys__body" data-reveal>
+          Empat dari lima proyek saya antarmukanya saya bangun sendiri dengan React,
+          TypeScript, dan Tailwind. Di SIGAP, tampilannya harus bisa dipakai pekerja
+          lapangan yang sedang buru-buru — jadi alurnya dibuat bertahap dan tidak
+          menuntut instalasi apa pun. Di KampusHub, mahasiswa cukup memindai QR
+          lewat kamera ponsel untuk masuk ke acara.
+        </p>
+        <a class="btn-more btn-more--dark" href="proyek.html#sigap" data-reveal><span>SELENGKAPNYA</span></a>
+      </div>
+      <div class="ksys__art scatter" data-reveal>
+        <div class="scatter__item"><img src="assets/img/projects/valorant-chat-ui.png" alt="Antarmuka percakapan" loading="lazy"></div>
+        <div class="scatter__item"><img src="assets/img/projects/valorant-dashboard.png" alt="Dasbor aplikasi" loading="lazy"></div>
+        <div class="scatter__item"><svg viewBox="0 0 400 300" role="img" aria-label="Ilustrasi antarmuka"><use href="#art-ui"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ISTILAH KUNCI ========== -->
+<section class="kw" id="istilah">
+  <div class="kw__wedge" aria-hidden="true"></div>
+  <div class="deco-flower deco-flower--cw" aria-hidden="true"
+       style="top:6%;right:5%;width:clamp(70px,9vw,130px);color:rgba(230,0,18,.5)">
+    <svg viewBox="0 0 100 100"><use href="#deco-flower"/></svg>
+  </div>
+
+  <div class="kw__head">
+    <h2 class="kw__title" data-reveal><span class="glitch" data-text="ISTILAH">ISTILAH</span></h2>
+    <p class="kw__sub" data-reveal>
+      Empat konsep yang paling sering muncul di proyek saya. Kalau istilahnya asing,
+      bagian ini menjelaskannya tanpa jargon.
+    </p>
+  </div>
+
+  <div class="kw__grid">
+    <article class="kw-card" data-reveal>
+      <div class="kw-card__art"><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#art-doc"/></svg></div>
+      <span class="kw-card__pill">RAG</span>
+      <p class="kw-card__desc">
+        Model bahasa tidak menjawab dari ingatannya, tapi dari dokumen yang benar-benar
+        diambil saat itu juga. Kalau dokumennya tidak ada, ia mengaku tidak tahu —
+        bukan mengarang.
+      </p>
+      <a class="kw-card__cta" href="proyek.html#perda">CONTOHNYA</a>
+    </article>
+
+    <article class="kw-card" data-reveal>
+      <div class="kw-card__art"><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#art-graph"/></svg></div>
+      <span class="kw-card__pill">GRAPH RAG</span>
+      <p class="kw-card__desc">
+        Pencarian dua tahap. Graf pengetahuan menyaring dulu dokumen mana yang masuk akal
+        berdasarkan hubungan antar-dokumen, baru pencarian makna dijalankan di dalam
+        hasil saringan itu. Lebih tepat sasaran.
+      </p>
+      <a class="kw-card__cta" href="proyek.html#perda">CONTOHNYA</a>
+    </article>
+
+    <article class="kw-card" data-reveal>
+      <div class="kw-card__art"><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#art-spark"/></svg></div>
+      <span class="kw-card__pill">INTENT ROUTING</span>
+      <p class="kw-card__desc">
+        Sebelum mencari, sistem menebak dulu pertanyaannya soal apa, lalu mengarahkannya
+        ke sumber yang tepat. Pertanyaan soal senjata tidak akan menarik dokumen
+        tentang hal lain.
+      </p>
+      <a class="kw-card__cta" href="proyek.html#valorant">CONTOHNYA</a>
+    </article>
+
+    <article class="kw-card" data-reveal>
+      <div class="kw-card__art"><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#art-db"/></svg></div>
+      <span class="kw-card__pill">VECTOR STORE</span>
+      <p class="kw-card__desc">
+        Teks diubah jadi deretan angka yang mewakili maknanya, lalu disimpan supaya bisa
+        dicari berdasarkan kemiripan arti — bukan kesamaan kata. "Sampah" dan "limbah"
+        dianggap berdekatan.
+      </p>
+      <a class="kw-card__cta" href="proyek.html#valorant">CONTOHNYA</a>
+    </article>
+  </div>
+</section>
+
+<!-- ========== PROYEK ========== -->
+<section class="sig" id="proyek">
+  <div class="sig__head">
+    <h2 class="sec__label sec__label--gold" data-reveal>WORKS</h2>
+    <p class="sig__title" data-reveal><span class="glitch" data-text="Lima Proyek">Lima Proyek</span></p>
+  </div>
+
+  <div class="sig-tabs" role="tablist" aria-label="Pilih proyek" data-reveal>
+    <button class="sig-thumb is-active" type="button" role="tab" id="sig-tab-1" aria-controls="sig-panel-1" aria-selected="true">
+      <span class="sig-thumb__stack">
+        <span class="sig-thumb__ring sig-thumb__ring--outer"></span>
+        <span class="sig-thumb__ring sig-thumb__ring--inner"></span>
+        <span class="sig-thumb__shine">
+          <img src="assets/img/projects/sigap.png" alt="" loading="lazy">
+        </span>
+        <span class="sig-thumb__pointer"></span>
+      </span>
+      <span class="sig-thumb__name">SIGAP</span>
+    </button>
+
+    <button class="sig-thumb" type="button" role="tab" id="sig-tab-2" aria-controls="sig-panel-2" aria-selected="false">
+      <span class="sig-thumb__stack">
+        <span class="sig-thumb__ring sig-thumb__ring--outer"></span>
+        <span class="sig-thumb__ring sig-thumb__ring--inner"></span>
+        <span class="sig-thumb__shine">
+          <img src="assets/img/projects/perda.png" alt="" loading="lazy">
+        </span>
+        <span class="sig-thumb__pointer"></span>
+      </span>
+      <span class="sig-thumb__name">PERDA AI</span>
+    </button>
+
+    <button class="sig-thumb" type="button" role="tab" id="sig-tab-3" aria-controls="sig-panel-3" aria-selected="false">
+      <span class="sig-thumb__stack">
+        <span class="sig-thumb__ring sig-thumb__ring--outer"></span>
+        <span class="sig-thumb__ring sig-thumb__ring--inner"></span>
+        <span class="sig-thumb__shine">
+          <img src="assets/img/projects/valorant-chat-ui.png" alt="" loading="lazy">
+        </span>
+        <span class="sig-thumb__pointer"></span>
+      </span>
+      <span class="sig-thumb__name">VALORANT AI</span>
+    </button>
+
+    <button class="sig-thumb" type="button" role="tab" id="sig-tab-4" aria-controls="sig-panel-4" aria-selected="false">
+      <span class="sig-thumb__stack">
+        <span class="sig-thumb__ring sig-thumb__ring--outer"></span>
+        <span class="sig-thumb__ring sig-thumb__ring--inner"></span>
+        <span class="sig-thumb__shine">
+          <img src="assets/img/projects/kampushub.png" alt="" loading="lazy">
+        </span>
+        <span class="sig-thumb__pointer"></span>
+      </span>
+      <span class="sig-thumb__name">KAMPUSHUB</span>
+    </button>
+
+    <button class="sig-thumb" type="button" role="tab" id="sig-tab-5" aria-controls="sig-panel-5" aria-selected="false">
+      <span class="sig-thumb__stack">
+        <span class="sig-thumb__ring sig-thumb__ring--outer"></span>
+        <span class="sig-thumb__ring sig-thumb__ring--inner"></span>
+        <span class="sig-thumb__shine">
+          <img src="assets/img/projects/rekap.png" alt="" loading="lazy">
+        </span>
+        <span class="sig-thumb__pointer"></span>
+      </span>
+      <span class="sig-thumb__name">REKAP KEUANGAN</span>
+    </button>
+  </div>
+
+  <!-- panel 1 — SIGAP -->
+  <div class="sig-panel sig__hero is-active" id="sig-panel-1" role="tabpanel" aria-labelledby="sig-tab-1">
+    <div class="sig__hero-art">
+      <img src="assets/img/projects/sigap.png" alt="Halaman awal SIGAP" loading="lazy">
+    </div>
+    <div class="sig__hero-copy">
+      <p class="sig__hero-kicker">KERJA PRAKTIK · 2026 · TIM 5 ORANG</p>
+      <h3 class="sig__hero-name">SIGAP</h3>
+      <p class="sig__hero-by">PT Pertamina Hulu Rokan Zona 1 Field Lirik · Frontend &amp; Antarmuka</p>
+      <p class="sig__hero-desc">
+        Layanan aduan ICT internal untuk seluruh pekerja Field Lirik. Sistem mencocokkan
+        keluhan dengan panduan SOP, menuntun penyelesaian bertahap, dan meneruskan kasus
+        yang belum tuntas ke engineer lewat WhatsApp. Berjalan tanpa internet maupun
+        API key, dengan respons sekitar 0,14 detik.
+      </p>
+      <a class="btn-more" href="proyek.html#sigap"><span>SELENGKAPNYA</span></a>
+    </div>
+  </div>
+
+  <!-- panel 2 — PERDA AI -->
+  <div class="sig-panel sig__hero" id="sig-panel-2" role="tabpanel" aria-labelledby="sig-tab-2">
+    <div class="sig__hero-art">
+      <img src="assets/img/projects/perda.png" alt="Antarmuka Perda AI" loading="lazy">
+    </div>
+    <div class="sig__hero-copy">
+      <p class="sig__hero-kicker">PROYEK KULIAH · 2026 · TIM 5 ORANG</p>
+      <h3 class="sig__hero-name">PERDA AI</h3>
+      <p class="sig__hero-by">Backend &amp; sebagian antarmuka · Graph-Augmented RAG</p>
+      <p class="sig__hero-desc">
+        Chatbot untuk 167 peraturan daerah dan peraturan wali kota Pekanbaru — 38 Perda
+        dan 129 Perwa. Sebelumnya warga harus membuka situs resmi, menebak dokumen mana
+        yang benar, lalu membaca puluhan halaman untuk menemukan satu pasal.
+      </p>
+      <a class="btn-more" href="proyek.html#perda"><span>SELENGKAPNYA</span></a>
+    </div>
+  </div>
+
+  <!-- panel 3 — VALORANT AI -->
+  <div class="sig-panel sig__hero" id="sig-panel-3" role="tabpanel" aria-labelledby="sig-tab-3">
+    <div class="sig__hero-art">
+      <img src="assets/img/projects/valorant-chat-ui.png" alt="Antarmuka percakapan AI Valorant Assistant" loading="lazy">
+    </div>
+    <div class="sig__hero-copy">
+      <p class="sig__hero-kicker">PROYEK KULIAH · 2026 · MANDIRI</p>
+      <h3 class="sig__hero-name">AI VALORANT ASSISTANT</h3>
+      <p class="sig__hero-by">Seluruh sistem · Multi-RAG + Intent Routing</p>
+      <p class="sig__hero-desc">
+        Asisten yang menjawab pertanyaan soal agen, senjata, dan catatan pembaruan.
+        Alih-alih satu vector store untuk semuanya, saya pisah jadi tiga dan menambahkan
+        klasifikasi maksud di depannya — supaya konteks satu topik tidak mencemari topik lain.
+      </p>
+      <a class="btn-more" href="proyek.html#valorant"><span>SELENGKAPNYA</span></a>
+    </div>
+  </div>
+
+  <!-- panel 4 — KAMPUSHUB -->
+  <div class="sig-panel sig__hero" id="sig-panel-4" role="tabpanel" aria-labelledby="sig-tab-4">
+    <div class="sig__hero-art">
+      <img src="assets/img/projects/kampushub.png" alt="Beranda KampusHub" loading="lazy">
+    </div>
+    <div class="sig__hero-copy">
+      <p class="sig__hero-kicker">PROYEK KULIAH · 2026 · MANDIRI</p>
+      <h3 class="sig__hero-name">KAMPUSHUB</h3>
+      <p class="sig__hero-by">Frontend &amp; backend · React 19 + Firebase</p>
+      <p class="sig__hero-desc">
+        Informasi acara kampus tersebar di WhatsApp, Instagram, dan grup-grup terpisah.
+        KampusHub mengumpulkannya jadi satu, lengkap dengan RSVP, e-tiket QR, dan pemindai
+        kehadiran. Tiga peran pengguna: mahasiswa, panitia, dan admin.
+      </p>
+      <a class="btn-more" href="proyek.html#kampushub"><span>SELENGKAPNYA</span></a>
+    </div>
+  </div>
+
+  <!-- panel 5 — REKAP KEUANGAN -->
+  <div class="sig-panel sig__hero" id="sig-panel-5" role="tabpanel" aria-labelledby="sig-tab-5">
+    <div class="sig__hero-art">
+      <img src="assets/img/projects/rekap.png" alt="Dasbor Rekap Keuangan" loading="lazy">
+    </div>
+    <div class="sig__hero-copy">
+      <p class="sig__hero-kicker">PROYEK PRIBADI · MANDIRI · SUDAH TAYANG</p>
+      <h3 class="sig__hero-name">REKAP KEUANGAN</h3>
+      <p class="sig__hero-by">Toko elektronik keluarga · React 19 + Firebase</p>
+      <p class="sig__hero-desc">
+        Orang tua saya mencatat keuangan toko di kertas selama bertahun-tahun —
+        menghitung ulang setiap tutup buku memakan waktu lama dan rawan salah.
+        Aplikasi ini menggantikannya: input cepat, rekap otomatis harian sampai tahunan.
+      </p>
+      <a class="btn-more" href="proyek.html#rekap"><span>SELENGKAPNYA</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CARA KERJA ========== -->
+<section class="revival" id="carakerja">
+  <div class="revival__inner">
+    <h2 class="sec__label sec__label--gold" data-reveal>METHOD</h2>
+    <p class="revival__copy" data-reveal>
+      Saya tidak mulai dari teknologi apa yang sedang ramai, tapi dari siapa yang
+      sedang kesulitan. Setelah jalan, saya cari cara mengukurnya — karena "kelihatannya
+      sudah benar" bukan bukti.
+    </p>
+    <a class="btn-more" href="perjalanan.html" data-reveal><span>PERJALANAN SAYA</span></a>
+  </div>
+
+  <ul class="revival__points">
+    <li data-reveal><em>01</em><b>MULAI DARI ORANGNYA</b><span>Pekerja lapangan, warga kota, orang tua sendiri. Lima proyek, lima masalah yang benar-benar ada.</span></li>
+    <li data-reveal><em>02</em><b>UKUR, JANGAN TEBAK</b><span>RAGAS untuk kualitas jawaban, LangSmith untuk menelusuri alurnya. Kalau tidak terukur, belum selesai.</span></li>
+    <li data-reveal><em>03</em><b>SAMPAI KE TANGAN</b><span>Antarmuka saya bangun sendiri. Sistem yang tidak bisa dipakai orang awam belum menyelesaikan apa pun.</span></li>
+  </ul>
+</section>
+
+<!-- ========== ARSITEKTUR ========== -->
+<section class="special" id="arsitektur">
+  <div class="special__inner">
+    <h2 class="sec__label sec__label--gold" data-reveal>ARCHITECTURE</h2>
+    <p class="special__cap" data-reveal>
+      Alur Multi-RAG pada AI Valorant Assistant — klasifikasi maksud di depan,
+      tiga vector store terpisah di belakang.
+    </p>
+    <div class="special__figure" data-reveal>
+      <img src="assets/img/projects/valorant-architecture.png" alt="Diagram arsitektur Multi-RAG dengan intent routing" loading="lazy">
+    </div>
+    <a class="btn-more" href="proyek.html#valorant" data-reveal><span>BACA PENJELASANNYA</span></a>
+  </div>
+</section>
+
+<!-- ========== KEAHLIAN BERTINGKAT ========== -->
+<section class="pkg" id="keahlian">
+  <div class="pkg__head">
+    <h2 class="sec__label sec__label--gold" data-reveal>SKILLS</h2>
+    <p class="pkg__title" data-reveal><span class="glitch" data-text="Keahlian">Keahlian</span></p>
+  </div>
+
+  <div class="pkg__panel is-active">
+
+    <article class="pkg-card" data-reveal>
+      <p class="pkg-card__flag">BIDANG UTAMA</p>
+      <div class="pkg-card__art"><svg class="dish-art" viewBox="0 0 400 300"><use href="#art-ai"/></svg></div>
+      <div class="pkg-card__body">
+        <h3 class="pkg-card__name">AI &amp; LLM<br><small>ENGINEERING</small></h3>
+        <p class="pkg-card__note">Merancang arsitektur retrieval, lalu membuktikan hasilnya bisa dipercaya.</p>
+        <ul class="skill-list">
+          <li><span>Arsitektur RAG</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>LangChain</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Vector DB · ChromaDB</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>LangGraph</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Embedding &amp; sentence-transformers</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Knowledge Graph · Neo4j</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Evaluasi · RAGAS, LangSmith</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pkg-card" data-reveal>
+      <div class="pkg-card__art"><svg class="dish-art" viewBox="0 0 400 300"><use href="#art-ui"/></svg></div>
+      <div class="pkg-card__body">
+        <h3 class="pkg-card__name">FRONTEND</h3>
+        <p class="pkg-card__note">Antarmuka empat dari lima proyek saya bangun sendiri.</p>
+        <ul class="skill-list">
+          <li><span>React 19</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Tailwind CSS v4</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Vite</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>TypeScript</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Next.js 15</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Framer Motion</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pkg-card pkg-card--std" data-reveal>
+      <div class="pkg-card__art"><svg class="dish-art" viewBox="0 0 400 300"><use href="#art-db"/></svg></div>
+      <div class="pkg-card__body">
+        <h3 class="pkg-card__name">BACKEND &amp; DATABASE</h3>
+        <ul class="skill-list">
+          <li><span>Firebase · Auth &amp; Firestore</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Node.js &amp; Express</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Python</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>FastAPI</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>SQLite</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Autentikasi &amp; hak akses</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pkg-card pkg-card--std" data-reveal>
+      <div class="pkg-card__art"><svg class="dish-art" viewBox="0 0 400 300"><use href="#art-spark"/></svg></div>
+      <div class="pkg-card__body">
+        <h3 class="pkg-card__name">KOLABORASI &amp; ALAT</h3>
+        <p class="pkg-card__note">Bukan klaim kosong — semuanya menempel pada pengalaman nyata.</p>
+        <ul class="skill-list">
+          <li><span>Kerja sama tim <em>· dua proyek tim 5 orang</em></span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Kepemimpinan <em>· Kepala Divisi Kominfo</em></span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>Canva</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Microsoft Office</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li><span>Figma</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li><span>CapCut</span><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        </ul>
+      </div>
+    </article>
+
+    <a class="btn-more btn-more--wide" href="kontak.html"><span>HUBUNGI SAYA</span></a>
+  </div>
+</section>
+
+<!-- ========== SPEC ========== -->
+<section class="spec" id="info">
+  <div class="spec__inner">
+  <h2 class="sec__label sec__label--gold" data-reveal>PROFIL</h2>
+  <dl class="spec__list">
+    <div data-reveal><dt>NAMA</dt><dd>Rifqi Permana Putra</dd></div>
+    <div data-reveal><dt>STATUS</dt><dd>Mahasiswa tingkat akhir · terbuka untuk magang dan posisi entry-level</dd></div>
+    <div data-reveal><dt>PENDIDIKAN</dt><dd>Teknik Informatika — Universitas Islam Riau (2023 – sekarang)</dd></div>
+    <div data-reveal><dt>DOMISILI</dt><dd>Pekanbaru, Riau</dd></div>
+    <div data-reveal><dt>FOKUS</dt><dd>Sistem AI berbasis retrieval (RAG) · pengembangan frontend</dd></div>
+    <div data-reveal>
+      <dt>BAHASA</dt>
+      <dd>Indonesia (penutur asli) · Inggris (membaca dokumentasi teknis dengan lancar, komunikasi tulisan dan lisan tingkat menengah)</dd>
+    </div>
+    <div data-reveal>
+      <dt>ORGANISASI</dt>
+      <dd>Kepala Divisi Kominfo HIMATIF UIR 2026/2027<br><small>Anggota divisi yang sama pada periode 2025/2026</small></dd>
+    </div>
+    <div data-reveal>
+      <dt>KONTAK</dt>
+      <dd>
+        <a class="spec__link" href="mailto:rifqipermanaputra358@gmail.com">rifqipermanaputra358@gmail.com</a><br>
+        <a class="spec__link" href="https://github.com/RifqiPermanaPutra" target="_blank" rel="noopener">github.com/RifqiPermanaPutra</a><br>
+        <a class="spec__link" href="https://www.linkedin.com/in/rifqi-permana-putra-9563072a1/" target="_blank" rel="noopener">LinkedIn</a>
+      </dd>
+    </div>
+  </dl>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <a class="site-footer__logo" href="#top"><span>RIFQI</span><b>PERMANA PUTRA</b></a>
+  <ul class="site-footer__nav">
+    <li><a href="#about">TENTANG</a></li>
+    <li><a href="perjalanan.html">PERJALANAN</a></li>
+    <li><a href="proyek.html">PROYEK</a></li>
+    <li><a href="#keahlian">KEAHLIAN</a></li>
+    <li><a href="kontak.html">KONTAK</a></li>
+  </ul>
+  <p class="site-footer__note">
+    Dibangun sendiri dengan HTML, CSS, dan JavaScript tanpa framework.
+  </p>
+  <p class="site-footer__motto">BE GREATER, BE TOGETHER</p>
+  <p class="site-footer__copy">© 2026 RIFQI PERMANA PUTRA</p>
+</footer>
+
+<button class="back-top" id="backTop" type="button" aria-label="Kembali ke atas"><span></span></button>
+
+<script src="assets/js/sprite.js?v=17"></script>
+<script src="assets/js/main.js?v=17"></script>
+</body>
+</html>
