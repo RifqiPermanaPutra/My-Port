@@ -59,30 +59,9 @@
 .crumb span{ color:rgba(255,255,255,.4); }
 .crumb i{ font-style:normal; color:rgba(255,255,255,.25); }
 
-/* ---------- 3. ANCHOR NAV ---------- */
-.anchors{
-  position:sticky; top:var(--header-h); z-index:400;
-  display:flex; gap:8px; overflow-x:auto;
-  padding:14px var(--pad-x);
-  background:var(--c-yellow);
-  box-shadow:0 2px 0 var(--c-ink);
-  scrollbar-width:none;
-}
-.anchors::-webkit-scrollbar{ display:none; }
-.anchors a{
-  position:relative; flex:none; padding:9px 20px;
-  border:2px solid var(--c-ink);
-  font-family:var(--f-display); font-weight:700;
-  font-size:10px; letter-spacing:.2em; white-space:nowrap;
-  transition:background .3s var(--ease), color .3s var(--ease);
-}
-.anchors a:hover,.anchors a.is-active{ background:var(--c-ink); color:var(--c-yellow); }
-/* garis cyan penanda kategori aktif */
-.anchors a::after{
-  content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
-  background:transparent; transition:background .3s var(--ease);
-}
-.anchors a.is-active::after{ background:var(--c-cyan); }
+/* ---------- 3. ANCHOR NAV ----------
+   Dipindah ke style.css karena beranda juga memakainya, sementara
+   beranda tidak memuat page.css. */
 
 /* ---------- 4. BLOK KONTEN UMUM ---------- */
 .page-body{ padding:clamp(56px,8vw,110px) var(--pad-x); }
@@ -267,30 +246,9 @@
 }
 .callout p{ font-size:13px; line-height:1.8; margin:0; }
 
-/* ---------- 11. PAGER ---------- */
-.pager{
-  display:grid; gap:2px;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  background:var(--c-ink);
-}
-.pager a{
-  display:grid; gap:8px;
-  padding:clamp(28px,4vw,44px) var(--pad-x);
-  background:var(--c-ink); color:#fff;
-  transition:background .35s var(--ease);
-}
-.pager a:hover{ background:var(--c-cyan); }
-.pager em{
-  font-style:normal; font-family:var(--f-display); font-weight:700;
-  font-size:10px; letter-spacing:.26em; color:var(--c-cyan);
-}
-.pager a:hover em{ color:var(--c-ink); opacity:.7; }
-.pager b{
-  font-family:var(--f-display); font-weight:900;
-  font-size:clamp(18px,2.8vw,28px); letter-spacing:.04em; color:var(--c-yellow);
-}
-.pager a:hover b{ color:var(--c-ink); }
-.pager--next{ text-align:right; }
+/* ---------- 11. PAGER ----------
+   Dipindah ke style.css karena beranda juga memakainya, sementara
+   beranda tidak memuat page.css. Aturan responsifnya tetap di bawah. */
 
 /* ---------- 12. LANGKAH BERNOMOR ---------- */
 .steps{ counter-reset:step; display:grid; gap:14px; margin-top:clamp(24px,4vw,40px); }
@@ -551,3 +509,47 @@ textarea.field__i{ resize:vertical; min-height:88px; }
   .menu-item__price{ order:3; }
   .pager--next{ text-align:left; }
 }
+
+/* ---------- 19. KARTU JABATAN ORGANISASI ---------- */
+.org-grid{
+  display:grid; gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin:clamp(24px,4vw,40px) 0 clamp(20px,3vw,32px);
+}
+.org-card{
+  position:relative;
+  padding:clamp(24px,3.5vw,38px);
+  background:rgba(0,0,0,.05);
+  border-left:5px solid var(--c-ink);
+  transition:transform .35s var(--ease), background .35s var(--ease);
+}
+.org-card:hover{ transform:translateY(-6px); }
+/* jabatan yang sedang dijalani dibedakan tegas dari yang sudah lewat */
+.org-card--now{
+  background:var(--c-ink); color:var(--c-white);
+  border-left-color:var(--c-cyan);
+}
+.org-card__flag{
+  position:absolute; top:0; right:0;
+  padding:6px 14px;
+  background:var(--c-cyan); color:var(--c-ink);
+  font-family:var(--f-display); font-weight:800;
+  font-size:9px; letter-spacing:.2em;
+}
+.org-card__year{
+  font-family:var(--f-display); font-weight:900;
+  font-size:clamp(15px,2.2vw,20px); letter-spacing:.06em;
+  color:var(--c-red); margin-bottom:12px;
+}
+.org-card--now .org-card__year{ color:var(--c-cyan); }
+.org-card__role{
+  font-family:var(--f-display); font-weight:900;
+  font-size:clamp(18px,2.8vw,26px); line-height:1.25; letter-spacing:.02em;
+  margin-bottom:10px;
+}
+.org-card--now .org-card__role{ color:var(--c-yellow); }
+.org-card__org{
+  font-family:var(--f-display); font-weight:700;
+  font-size:11px; letter-spacing:.14em; opacity:.6; margin-bottom:16px;
+}
+.org-card__desc{ font-size:13px; line-height:1.9; opacity:.82; }

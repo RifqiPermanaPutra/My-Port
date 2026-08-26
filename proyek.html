@@ -15,10 +15,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=17">
-<link rel="stylesheet" href="assets/css/page.css?v=17">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
+<link rel="stylesheet" href="assets/css/page.css?v=25">
 </head>
 <body>
+
+<a class="skip" href="#konten">LANGSUNG KE KONTEN</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="site-header is-stuck" id="siteHeader">
   <a class="site-logo" href="index.html" aria-label="Rifqi Permana Putra — beranda">
@@ -39,12 +42,13 @@
   <ul class="site-nav-drawer__list">
     <li><a href="index.html#about"><em>01</em><b>ABOUT</b><span>Tentang Saya</span></a></li>
     <li><a href="index.html#prinsip"><em>02</em><b>PRINSIP</b><span>Cara Saya Menilai Kerja</span></a></li>
-    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Pengalaman</span></a></li>
-    <li><a href="index.html#fokus"><em>04</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
-    <li><a href="proyek.html"><em>05</em><b>WORKS</b><span>Lima Proyek</span></a></li>
-    <li><a href="index.html#carakerja"><em>06</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
-    <li><a href="index.html#keahlian"><em>07</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
-    <li><a href="kontak.html"><em>08</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
+    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Magang</span></a></li>
+    <li><a href="organisasi.html"><em>04</em><b>ORGANIZATION</b><span>HIMATIF UIR</span></a></li>
+    <li><a href="index.html#fokus"><em>05</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
+    <li><a href="proyek.html"><em>06</em><b>WORKS</b><span>Lima Proyek</span></a></li>
+    <li><a href="index.html#carakerja"><em>07</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
+    <li><a href="index.html#keahlian"><em>08</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
+    <li><a href="kontak.html"><em>09</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
   </ul>
   <div class="site-nav-drawer__foot">
     <span>PEKANBARU · 2026</span>
@@ -56,7 +60,7 @@
   </div>
 </nav>
 
-<main>
+<main id="konten">
 
 <section class="page-hero">
   <div class="page-hero__bg"></div>
@@ -68,7 +72,7 @@
   <p class="page-hero__label">WORKS</p>
   <h1 class="page-hero__title"><span class="glitch" data-text="PROYEK">PROYEK</span></h1>
   <p class="page-hero__sub">
-    Lima proyek, lima masalah yang benar-benar ada. Dua dikerjakan dalam tim, tiga sendiri.
+    Lima proyek, lima masalah yang saya lihat sendiri. Dua dikerjakan bertim, tiga sendirian.
   </p>
 </section>
 
@@ -101,26 +105,26 @@
       <div class="proj" data-reveal>
         <ul class="proj__meta">
           <li><b>Klien</b><span>PT Pertamina Hulu Rokan Zona 1 Field Lirik</span></li>
-          <li><b>Peran saya</b><span>Frontend &amp; antarmuka</span></li>
-          <li><b>Tim</b><span>5 orang · Divisi Information Technology</span></li>
+          <li><b>Peran saya</b><span>Frontend dan antarmuka</span></li>
+          <li><b>Tim</b><span>5 orang, Divisi Information Technology</span></li>
           <li><b>Durasi</b><span>45 hari</span></li>
         </ul>
 
         <h3 class="proj__h">Masalahnya</h3>
         <p class="proj__p">
-          Pekerja di Field Lirik yang mengalami kendala ICT — printer bermasalah, CCTV mati,
-          jaringan putus — tidak punya jalur pelaporan yang terstruktur. Keluhan mengalir lewat
-          jalur informal, tidak tercatat, dan sering berulang untuk masalah yang sebenarnya
-          sudah pernah diselesaikan sebelumnya.
+          Pekerja di Field Lirik yang kena masalah ICT (printer bermasalah, CCTV mati,
+          jaringan putus) tidak punya jalur pelaporan yang jelas. Keluhan mengalir lewat
+          obrolan pribadi, tidak tercatat, dan sering berulang untuk masalah yang sebetulnya
+          sudah pernah diselesaikan.
         </p>
 
         <h3 class="proj__h">Yang kami bangun</h3>
         <p class="proj__p">
-          Sistem mencocokkan kata kunci pada keluhan dengan panduan SOP yang sudah tersimpan,
-          lalu menuntun pengguna menyelesaikannya sendiri langkah demi langkah. Jika tetap
-          tidak selesai, laporan diteruskan langsung ke engineer divisi terkait melalui
-          WhatsApp. Seluruh laporan tercatat, lengkap dengan dasbor rekap harian sampai bulanan
-          dan pelacakan solusi mana yang paling sering berhasil.
+          Sistem mencocokkan kata kunci di keluhan dengan panduan SOP yang sudah tersimpan,
+          lalu menuntun penggunanya selangkah demi selangkah. Kalau tetap belum selesai,
+          laporannya diteruskan ke engineer divisi terkait lewat WhatsApp. Semua laporan
+          tercatat, ada dasbor rekap harian sampai bulanan, dan terlihat solusi mana yang
+          paling sering berhasil.
         </p>
 
         <div class="proj__metrics">
@@ -159,24 +163,24 @@
 
       <div class="proj" data-reveal>
         <ul class="proj__meta">
-          <li><b>Peran saya</b><span>Backend &amp; sebagian antarmuka</span></li>
+          <li><b>Peran saya</b><span>Backend dan sebagian antarmuka</span></li>
           <li><b>Tim</b><span>5 orang</span></li>
           <li><b>Pendekatan</b><span>Graph-Augmented RAG</span></li>
         </ul>
 
         <h3 class="proj__h">Masalahnya</h3>
         <p class="proj__p">
-          Warga yang ingin tahu isi peraturan daerah harus membuka situs resmi, menebak
-          dokumen mana yang relevan, mengunduhnya, lalu membaca puluhan halaman untuk
-          menemukan satu pasal yang dicari. Tiga langkah yang semuanya melelahkan.
+          Warga yang mau tahu isi peraturan daerah harus buka situs resmi, menebak dokumen
+          mana yang benar, mengunduhnya, lalu membaca puluhan halaman cuma untuk menemukan
+          satu pasal. Melelahkan di tiap langkahnya.
         </p>
 
         <h3 class="proj__h">Yang kami bangun</h3>
         <p class="proj__p">
-          Chatbot yang menjawab langsung dari isi peraturan, dengan pencarian dua tahap:
-          graf pengetahuan Neo4j menyaring dokumen yang relevan lebih dulu berdasarkan
-          hierarkinya, baru ChromaDB melakukan pencarian semantik di dalam hasil saringan itu.
-          Tersedia juga mode graf lokal, sehingga sistem tetap jalan tanpa Neo4j.
+          Chatbot yang menjawab langsung dari isi peraturannya. Pencariannya dua tahap:
+          graf Neo4j menyaring dulu dokumen mana yang relevan berdasarkan hierarkinya, baru
+          ChromaDB mencari maknanya di sisa itu. Ada juga mode graf lokal, jadi sistemnya
+          tetap jalan walau tanpa Neo4j.
         </p>
 
         <div class="proj__metrics">
@@ -215,23 +219,23 @@
 
       <div class="proj" data-reveal>
         <ul class="proj__meta">
-          <li><b>Peran saya</b><span>Seluruh sistem, backend sampai frontend</span></li>
+          <li><b>Peran saya</b><span>Dikerjakan sendiri, backend sampai frontend</span></li>
           <li><b>Pendekatan</b><span>Multi-RAG + Intent Routing</span></li>
         </ul>
 
         <h3 class="proj__h">Masalahnya</h3>
         <p class="proj__p">
-          RAG dengan satu vector store untuk semua topik mudah tercemar: pertanyaan soal
-          senjata bisa menarik potongan dokumen tentang agen, dan model menjawab dengan
-          percaya diri meski salah.
+          Kalau semua topik ditaruh di satu vector store, isinya gampang tercampur.
+          Pertanyaan soal senjata bisa menarik potongan dokumen tentang agen, lalu modelnya
+          menjawab dengan yakin padahal salah.
         </p>
 
         <h3 class="proj__h">Yang saya bangun</h3>
         <p class="proj__p">
-          Tiga vector store terpisah — agen, senjata, dan catatan pembaruan — dengan
-          klasifikasi maksud di depannya yang menentukan store mana yang dipakai. Alurnya
-          disusun sebagai graf agentic memakai LangGraph, dan setiap jawaban menyertakan
-          kutipan sumbernya. Seluruh jalannya dipantau lewat LangSmith.
+          Tiga vector store terpisah untuk agen, senjata, dan catatan pembaruan, dengan
+          penebak maksud di depannya yang memilih store mana yang dipakai. Alurnya disusun
+          sebagai graf agentic pakai LangGraph, dan tiap jawaban menyertakan kutipan
+          sumbernya. Jalannya dipantau lewat LangSmith.
         </p>
 
         <div class="proj__gallery">
@@ -268,23 +272,23 @@
 
       <div class="proj" data-reveal>
         <ul class="proj__meta">
-          <li><b>Peran saya</b><span>Frontend dan backend, seluruhnya</span></li>
+          <li><b>Peran saya</b><span>Dikerjakan sendiri, frontend sampai backend</span></li>
           <li><b>Arsitektur</b><span>React 19 + Firebase</span></li>
         </ul>
 
         <h3 class="proj__h">Masalahnya</h3>
         <p class="proj__p">
-          Informasi acara kampus tersebar di mana-mana — grup WhatsApp, Instagram himpunan,
-          poster di mading. Mahasiswa sering melewatkan seminar atau lomba hanya karena
-          tidak melihat pengumumannya.
+          Informasi acara kampus tersebar di mana-mana: grup WhatsApp, Instagram himpunan,
+          poster di mading. Banyak yang melewatkan seminar atau lomba cuma karena tidak
+          sempat lihat pengumumannya.
         </p>
 
         <h3 class="proj__h">Yang saya bangun</h3>
         <p class="proj__p">
-          Satu tempat untuk seluruh acara kampus, lengkap dengan RSVP dan e-tiket QR yang
-          langsung terbit setelah mendaftar. Panitia memindai tiket lewat kamera ponsel untuk
-          validasi kehadiran. Ada tiga peran pengguna: mahasiswa, panitia, dan admin yang
-          menyetujui pengajuan acara.
+          Satu tempat untuk semua acara kampus, lengkap dengan RSVP dan e-tiket QR yang
+          langsung terbit begitu mendaftar. Panitia tinggal memindai tiketnya lewat kamera
+          ponsel. Ada tiga peran: mahasiswa, panitia, dan admin yang menyetujui pengajuan
+          acara.
         </p>
 
         <div class="proj__gallery">
@@ -301,7 +305,7 @@
 
         <div class="callout callout--note">
           <p class="callout__t">CATATAN JUJUR</p>
-          <p>Sistem ini belum pernah dipakai pada acara kampus yang sungguhan — masih berhenti di tahap purwarupa yang berfungsi penuh.</p>
+          <p>Sistem ini belum pernah dipakai di acara kampus sungguhan. Masih berhenti sebagai purwarupa yang sudah berfungsi penuh.</p>
         </div>
 
         <div class="proj__links">
@@ -324,22 +328,22 @@
       <div class="proj" data-reveal>
         <ul class="proj__meta">
           <li><b>Untuk</b><span>Toko elektronik keluarga</span></li>
-          <li><b>Peran saya</b><span>Seluruhnya, dari rancangan sampai penerapan</span></li>
+          <li><b>Peran saya</b><span>Dikerjakan sendiri, dari rancangan sampai dipakai</span></li>
           <li><b>Status</b><span>Sudah tayang dan dipakai</span></li>
         </ul>
 
         <h3 class="proj__h">Masalahnya</h3>
         <p class="proj__p">
-          Orang tua saya mencatat keuangan toko di buku tulis. Setiap kali tutup buku,
-          menghitung ulang selalu memakan waktu lama dan mudah keliru — apalagi kalau
-          ingin membandingkan pemasukan bulan ini dengan bulan sebelumnya.
+          Orang tua saya mencatat keuangan toko di buku tulis. Tiap kali tutup buku,
+          menghitung ulangnya lama dan gampang keliru. Apalagi kalau mau membandingkan
+          pemasukan bulan ini dengan bulan lalu.
         </p>
 
         <h3 class="proj__h">Yang saya bangun</h3>
         <p class="proj__p">
-          Aplikasi pembukuan sederhana yang bisa dipakai tanpa perlu belajar: input transaksi
-          cepat, lalu rekap otomatis untuk hari ini, bulan ini, tahun ini, atau rentang
-          tanggal pilihan. Perbandingan kas masuk dengan laba bersih ditampilkan langsung
+          Aplikasi pembukuan sederhana yang bisa langsung dipakai tanpa perlu diajari.
+          Transaksi diinput cepat, rekapnya otomatis untuk hari ini, bulan ini, tahun ini,
+          atau rentang tanggal pilihan. Perbandingan kas masuk dan laba bersih ditampilkan
           sebagai grafik, bukan angka mentah.
         </p>
 
@@ -376,6 +380,7 @@
   <ul class="site-footer__nav">
     <li><a href="index.html#about">TENTANG</a></li>
     <li><a href="perjalanan.html">PERJALANAN</a></li>
+    <li><a href="organisasi.html">ORGANISASI</a></li>
     <li><a href="proyek.html">PROYEK</a></li>
     <li><a href="index.html#keahlian">KEAHLIAN</a></li>
     <li><a href="kontak.html">KONTAK</a></li>
@@ -389,7 +394,7 @@
 
 <button class="back-top" id="backTop" type="button" aria-label="Kembali ke atas"><span></span></button>
 
-<script src="assets/js/sprite.js?v=17"></script>
-<script src="assets/js/main.js?v=17"></script>
+<script src="assets/js/sprite.js?v=25"></script>
+<script src="assets/js/main.js?v=25"></script>
 </body>
 </html>

@@ -15,10 +15,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=17">
-<link rel="stylesheet" href="assets/css/page.css?v=17">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
+<link rel="stylesheet" href="assets/css/page.css?v=25">
 </head>
 <body>
+
+<a class="skip" href="#konten">LANGSUNG KE KONTEN</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="site-header is-stuck" id="siteHeader">
   <a class="site-logo" href="index.html" aria-label="Rifqi Permana Putra — beranda">
@@ -39,12 +42,13 @@
   <ul class="site-nav-drawer__list">
     <li><a href="index.html#about"><em>01</em><b>ABOUT</b><span>Tentang Saya</span></a></li>
     <li><a href="index.html#prinsip"><em>02</em><b>PRINSIP</b><span>Cara Saya Menilai Kerja</span></a></li>
-    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Pengalaman</span></a></li>
-    <li><a href="index.html#fokus"><em>04</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
-    <li><a href="proyek.html"><em>05</em><b>WORKS</b><span>Lima Proyek</span></a></li>
-    <li><a href="index.html#carakerja"><em>06</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
-    <li><a href="index.html#keahlian"><em>07</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
-    <li><a href="kontak.html"><em>08</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
+    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Magang</span></a></li>
+    <li><a href="organisasi.html"><em>04</em><b>ORGANIZATION</b><span>HIMATIF UIR</span></a></li>
+    <li><a href="index.html#fokus"><em>05</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
+    <li><a href="proyek.html"><em>06</em><b>WORKS</b><span>Lima Proyek</span></a></li>
+    <li><a href="index.html#carakerja"><em>07</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
+    <li><a href="index.html#keahlian"><em>08</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
+    <li><a href="kontak.html"><em>09</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
   </ul>
   <div class="site-nav-drawer__foot">
     <span>PEKANBARU · 2026</span>
@@ -56,7 +60,7 @@
   </div>
 </nav>
 
-<main>
+<main id="konten">
 
 <section class="page-hero">
   <div class="page-hero__bg"></div>
@@ -68,7 +72,7 @@
   <p class="page-hero__label">CONTACT</p>
   <h1 class="page-hero__title"><span class="glitch" data-text="KONTAK">KONTAK</span></h1>
   <p class="page-hero__sub">
-    Terbuka untuk magang dan posisi entry-level. Email adalah cara tercepat menghubungi saya.
+    Terbuka untuk magang dan posisi entry-level. Paling cepat lewat email.
   </p>
 </section>
 
@@ -132,8 +136,8 @@
         <li data-reveal><b>Posisi</b><span>Magang atau entry-level di bidang AI engineering, backend, atau frontend.</span></li>
         <li data-reveal><b>Lokasi</b><span>Pekanbaru dan sekitarnya, atau jarak jauh. Terbuka untuk pindah bila diperlukan.</span></li>
         <li data-reveal><b>Status</b><span>Mahasiswa tingkat akhir Teknik Informatika, Universitas Islam Riau.</span></li>
-        <li data-reveal><b>Yang saya bawa</b><span>Pengalaman membangun dua arsitektur RAG berbeda, satu sistem yang dipakai perusahaan, dan satu aplikasi yang tayang serta dipakai harian.</span></li>
-        <li data-reveal><b>Yang sedang saya pelajari</b><span>Pengujian otomatis dan praktik penerapan yang lebih rapi.</span></li>
+        <li data-reveal><b>Yang saya bawa</b><span>Pengalaman membuat dua sistem AI dengan pendekatan berbeda, satu sistem yang dipakai perusahaan, dan satu aplikasi yang sudah tayang dan dipakai harian.</span></li>
+        <li data-reveal><b>Yang sedang saya pelajari</b><span>Pengujian otomatis dan cara penerapan yang lebih rapi.</span></li>
       </ul>
     </section>
   </div>
@@ -147,8 +151,8 @@
       <p class="lead" data-reveal style="color:var(--c-yellow)">Kirim pesan singkat.</p>
 
       <p class="form-demo-note" data-reveal>
-        Formulir ini belum terhubung ke server mana pun — isian Anda tetap di browser ini saja.
-        Untuk sementara, silakan gunakan email di atas.
+        Formulir ini belum terhubung ke server, jadi isiannya tidak terkirim ke mana-mana.
+        Untuk sekarang silakan pakai email di atas.
       </p>
 
       <form class="form" id="reserveForm" novalidate data-reveal>
@@ -198,6 +202,7 @@
   <ul class="site-footer__nav">
     <li><a href="index.html#about">TENTANG</a></li>
     <li><a href="perjalanan.html">PERJALANAN</a></li>
+    <li><a href="organisasi.html">ORGANISASI</a></li>
     <li><a href="proyek.html">PROYEK</a></li>
     <li><a href="index.html#keahlian">KEAHLIAN</a></li>
     <li><a href="kontak.html">KONTAK</a></li>
@@ -211,7 +216,7 @@
 
 <button class="back-top" id="backTop" type="button" aria-label="Kembali ke atas"><span></span></button>
 
-<script src="assets/js/sprite.js?v=17"></script>
-<script src="assets/js/main.js?v=17"></script>
+<script src="assets/js/sprite.js?v=25"></script>
+<script src="assets/js/main.js?v=25"></script>
 </body>
 </html>

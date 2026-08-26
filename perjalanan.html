@@ -10,15 +10,18 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Rifqi Permana Putra">
 <meta property="og:title" content="Perjalanan — Rifqi Permana Putra">
-<meta property="og:description" content="Dari bangku Teknik Informatika sampai kerja praktik di Pertamina — dan lima proyek di antaranya.">
+<meta property="og:description" content="Dari bangku kuliah sampai kerja praktik di Pertamina, dan lima proyek di antaranya.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=17">
-<link rel="stylesheet" href="assets/css/page.css?v=17">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
+<link rel="stylesheet" href="assets/css/page.css?v=25">
 </head>
 <body>
+
+<a class="skip" href="#konten">LANGSUNG KE KONTEN</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="site-header is-stuck" id="siteHeader">
   <a class="site-logo" href="index.html" aria-label="Rifqi Permana Putra — beranda">
@@ -39,12 +42,13 @@
   <ul class="site-nav-drawer__list">
     <li><a href="index.html#about"><em>01</em><b>ABOUT</b><span>Tentang Saya</span></a></li>
     <li><a href="index.html#prinsip"><em>02</em><b>PRINSIP</b><span>Cara Saya Menilai Kerja</span></a></li>
-    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Pengalaman</span></a></li>
-    <li><a href="index.html#fokus"><em>04</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
-    <li><a href="proyek.html"><em>05</em><b>WORKS</b><span>Lima Proyek</span></a></li>
-    <li><a href="index.html#carakerja"><em>06</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
-    <li><a href="index.html#keahlian"><em>07</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
-    <li><a href="kontak.html"><em>08</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
+    <li><a href="perjalanan.html"><em>03</em><b>JOURNEY</b><span>Pendidikan &amp; Magang</span></a></li>
+    <li><a href="organisasi.html"><em>04</em><b>ORGANIZATION</b><span>HIMATIF UIR</span></a></li>
+    <li><a href="index.html#fokus"><em>05</em><b>FOCUS</b><span>Dua Bidang Utama</span></a></li>
+    <li><a href="proyek.html"><em>06</em><b>WORKS</b><span>Lima Proyek</span></a></li>
+    <li><a href="index.html#carakerja"><em>07</em><b>METHOD</b><span>Cara Saya Bekerja</span></a></li>
+    <li><a href="index.html#keahlian"><em>08</em><b>SKILLS</b><span>Keahlian Bertingkat</span></a></li>
+    <li><a href="kontak.html"><em>09</em><b>CONTACT</b><span>Hubungi Saya</span></a></li>
   </ul>
   <div class="site-nav-drawer__foot">
     <span>PEKANBARU · 2026</span>
@@ -56,7 +60,7 @@
   </div>
 </nav>
 
-<main>
+<main id="konten">
 
 <section class="page-hero">
   <div class="page-hero__bg"></div>
@@ -68,7 +72,7 @@
   <p class="page-hero__label">JOURNEY</p>
   <h1 class="page-hero__title"><span class="glitch" data-text="PERJALANAN">PERJALANAN</span></h1>
   <p class="page-hero__sub">
-    Dari bangku Teknik Informatika sampai kerja praktik di Pertamina — dan lima proyek di antaranya.
+    Dari bangku kuliah sampai kerja praktik di Pertamina, dan lima proyek di antaranya.
   </p>
 </section>
 
@@ -76,22 +80,28 @@
   <a href="index.html">BERANDA</a><i>/</i><span>PERJALANAN</span>
 </nav>
 
+<nav class="anchors" aria-label="Loncat ke bagian">
+  <a href="#linimasa">LINIMASA</a>
+  <a href="#organisasi">ORGANISASI</a>
+  <a href="#pendidikan">PENDIDIKAN</a>
+</nav>
+
 <div class="page-body">
   <div class="wrap wrap--narrow">
     <p class="lead" data-reveal>
-      Di Teknik Informatika saya memilih mengerjakan hal yang
-      <b>ada penggunanya</b> — bukan latihan yang berhenti di nilai.
+      Di Teknik Informatika saya lebih senang mengerjakan hal yang
+      <b>ada penggunanya</b>, bukan latihan yang berhenti di nilai.
     </p>
     <div class="prose" data-reveal>
       <p>
-        Keputusan itu mengarahkan hampir semua yang saya kerjakan sejak awal kuliah.
-        Setiap kali ada tugas besar, saya cari dulu masalah nyata yang bisa dipasangkan
-        ke sana — bukan membuat contoh kasus yang berhenti begitu nilainya keluar.
+        Kebiasaan itu terbawa ke hampir semua tugas kuliah saya. Tiap kali dapat proyek
+        besar, saya cari dulu masalah di sekitar yang bisa dipasangkan ke sana, daripada
+        mengarang contoh kasus yang selesai begitu nilainya keluar.
       </p>
       <p>
-        Hasilnya lima proyek dengan bentuk yang berbeda-beda: dua sistem AI berbasis
-        retrieval, dua aplikasi full-stack, dan satu sistem internal untuk perusahaan.
-        Salah satunya sudah tayang dan dipakai setiap hari.
+        Jadilah lima proyek dengan bentuk berbeda-beda: dua sistem AI, dua aplikasi
+        full-stack, dan satu sistem internal untuk perusahaan. Satu di antaranya sudah
+        tayang dan dipakai setiap hari.
       </p>
     </div>
   </div>
@@ -101,8 +111,7 @@
   <div class="wrap">
     <blockquote class="quote" data-reveal>
       <p>
-        Sistem yang tidak bisa dipakai orang awam belum menyelesaikan apa pun,
-        sebagus apa pun kodenya di dalam.
+        Percuma kodenya rapi kalau orang yang memakainya malah kebingungan.
       </p>
       <cite>— PRINSIP YANG SAYA PEGANG</cite>
     </blockquote>
@@ -112,7 +121,7 @@
 <!-- ===== TIMELINE ===== -->
 <div class="page-body">
   <div class="wrap wrap--narrow">
-    <h2 class="sec__label" data-reveal>LINIMASA</h2>
+    <h2 id="linimasa" class="sec__label" data-reveal>LINIMASA</h2>
 
     <div class="timeline">
       <div class="tl-item" data-reveal>
@@ -123,7 +132,7 @@
 
       <div class="tl-item" data-reveal>
         <p class="tl-item__year">2022 – 2023</p>
-        <h3 class="tl-item__title">Universitas Andalas — Fisika, FMIPA</h3>
+        <h3 class="tl-item__title">Universitas Andalas, Fisika FMIPA</h3>
         <p class="tl-item__desc">
           Menempuh satu tahun perkuliahan sebelum berpindah ke Teknik Informatika.
         </p>
@@ -131,29 +140,28 @@
 
       <div class="tl-item tl-item--key" data-reveal>
         <p class="tl-item__year">2023</p>
-        <h3 class="tl-item__title">Pindah ke Teknik Informatika — Universitas Islam Riau</h3>
+        <h3 class="tl-item__title">Pindah ke Teknik Informatika, Universitas Islam Riau</h3>
         <p class="tl-item__desc">
-          Memulai ulang dari awal di bidang yang benar-benar saya inginkan.
+          Mulai lagi dari awal, kali ini di bidang yang memang saya mau.
         </p>
       </div>
 
       <div class="tl-item" data-reveal>
         <p class="tl-item__year">2025 / 2026</p>
-        <h3 class="tl-item__title">Anggota Divisi Kominfo — HIMATIF UIR</h3>
+        <h3 class="tl-item__title">Anggota Divisi Kominfo HIMATIF UIR</h3>
         <p class="tl-item__desc">
-          Masuk divisi yang menangani seluruh kebutuhan visual dan media himpunan:
-          penyuntingan video, desain materi publikasi, dan pengelolaan akun Instagram
-          serta TikTok.
+          Masuk divisi yang mengurus semua kebutuhan visual dan media himpunan: menyunting
+          video, mendesain materi publikasi, dan memegang akun Instagram serta TikTok.
         </p>
       </div>
 
       <div class="tl-item tl-item--key" data-reveal>
         <p class="tl-item__year">2026</p>
-        <h3 class="tl-item__title">Magang — PT Pertamina Hulu Rokan Zona 1 Field Lirik</h3>
+        <h3 class="tl-item__title">Magang di PT Pertamina Hulu Rokan Zona 1 Field Lirik</h3>
         <p class="tl-item__desc">
-          Empat puluh lima hari di Divisi Information Technology. Bersama tim beranggotakan
-          lima orang, membangun SIGAP — layanan aduan ICT internal untuk seluruh pekerja
-          Field Lirik. Saya memegang sisi frontend dan antarmuka.
+          Empat puluh lima hari di Divisi Information Technology. Bersama tim lima orang
+          kami membangun SIGAP, layanan aduan ICT internal untuk pekerja Field Lirik.
+          Saya kebagian sisi frontend dan antarmukanya.
         </p>
       </div>
 
@@ -161,67 +169,47 @@
         <p class="tl-item__year">2026</p>
         <h3 class="tl-item__title">Empat proyek berbasis AI dan web</h3>
         <p class="tl-item__desc">
-          Perda AI, AI Valorant Assistant, KampusHub, dan Rekap Keuangan. Dua arsitektur
-          RAG yang berbeda, dua aplikasi full-stack — salah satunya sudah tayang dan
-          dipakai setiap hari.
+          Perda AI, AI Valorant Assistant, KampusHub, dan Rekap Keuangan. Dua sistem AI
+          dengan pendekatan berbeda dan dua aplikasi full-stack. Satu di antaranya sudah
+          tayang dan dipakai setiap hari.
         </p>
       </div>
 
       <div class="tl-item tl-item--key" data-reveal>
         <p class="tl-item__year">2026 / 2027</p>
-        <h3 class="tl-item__title">Kepala Divisi Kominfo — HIMATIF UIR</h3>
+        <h3 class="tl-item__title">Kepala Divisi Kominfo HIMATIF UIR</h3>
         <p class="tl-item__desc">
-          Naik dari anggota menjadi kepala divisi dalam satu periode. Memimpin tim yang
-          menangani publikasi, media sosial, dan dokumentasi seluruh kegiatan himpunan.
+          Naik dari anggota jadi kepala divisi dalam satu periode. Memimpin tim yang
+          mengurus publikasi, media sosial, dan dokumentasi kegiatan himpunan.
         </p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ===== ORGANISASI ===== -->
+<!-- ===== ORGANISASI (ringkas, rinciannya di halaman sendiri) ===== -->
 <div class="page-body page-body--pale">
-  <div class="wrap">
-    <h2 class="sec__label" data-reveal>ORGANISASI</h2>
-    <p class="lead" data-reveal>Yang dikerjakan Kominfo HIMATIF.</p>
-
-    <div class="roles">
-      <div class="role" data-reveal>
-        <p class="role__n">01</p>
-        <h3 class="role__t">MEDIA SOSIAL</h3>
-        <p class="role__d">Mengelola akun Instagram dan TikTok himpunan — menyusun jadwal unggahan, menulis naskah, sampai menjawab pertanyaan yang masuk.</p>
-      </div>
-      <div class="role" data-reveal>
-        <p class="role__n">02</p>
-        <h3 class="role__t">DESAIN PUBLIKASI</h3>
-        <p class="role__d">Membuat poster, feed, dan materi visual untuk setiap kegiatan himpunan.</p>
-      </div>
-      <div class="role" data-reveal>
-        <p class="role__n">03</p>
-        <h3 class="role__t">PENYUNTINGAN VIDEO</h3>
-        <p class="role__d">Menggarap konten video pendek untuk media sosial dan dokumentasi acara.</p>
-      </div>
-      <div class="role" data-reveal>
-        <p class="role__n">04</p>
-        <h3 class="role__t">TIM PDD</h3>
-        <p class="role__d">Saat himpunan menggelar acara besar, divisi ini merangkap sebagai tim publikasi, dekorasi, dan dokumentasi.</p>
-      </div>
-    </div>
-
-    <div class="callout" data-reveal>
-      <p class="callout__t">HIMATIF UIR</p>
+  <div class="wrap wrap--narrow">
+    <h2 id="organisasi" class="sec__label" data-reveal>ORGANISASI</h2>
+    <p class="lead" data-reveal>
+      Dua periode di Divisi Komunikasi dan Informasi HIMATIF UIR —
+      <b>naik dari anggota menjadi kepala divisi</b> dalam satu tahun.
+    </p>
+    <div class="prose" data-reveal>
       <p>
-        Himpunan Mahasiswa Teknik Informatika, Universitas Islam Riau — dapat dilihat di
-        <a class="spec__link" href="https://instagram.com/himatifuir_" target="_blank" rel="noopener">@himatifuir_</a>.
+        Divisi ini memegang seluruh wajah publik himpunan: media sosial, desain
+        publikasi, penyuntingan video, dan dokumentasi. Saat ada acara besar,
+        seluruh anggotanya merangkap jadi tim PDD.
       </p>
     </div>
+    <a class="btn-more" href="organisasi.html" data-reveal><span>RINCIAN ORGANISASI</span></a>
   </div>
 </div>
 
 <!-- ===== PENDIDIKAN ===== -->
 <div class="page-body page-body--dark">
   <div class="wrap">
-    <h2 class="sec__label sec__label--gold" data-reveal>PENDIDIKAN</h2>
+    <h2 id="pendidikan" class="sec__label sec__label--gold" data-reveal>PENDIDIKAN</h2>
 
     <div class="table-scroll" data-reveal>
       <table class="sesi-table">
@@ -250,7 +238,7 @@
 
     <div class="callout" data-reveal>
       <p class="callout__t">SERTIFIKASI</p>
-      <p>Belum ada. Bagian ini akan diisi begitu saya menyelesaikan sertifikasi yang sedang saya kejar.</p>
+      <p>Belum ada. Bagian ini saya isi begitu sertifikasi yang sedang dikejar selesai.</p>
     </div>
   </div>
 </div>
@@ -267,6 +255,7 @@
   <ul class="site-footer__nav">
     <li><a href="index.html#about">TENTANG</a></li>
     <li><a href="perjalanan.html">PERJALANAN</a></li>
+    <li><a href="organisasi.html">ORGANISASI</a></li>
     <li><a href="proyek.html">PROYEK</a></li>
     <li><a href="index.html#keahlian">KEAHLIAN</a></li>
     <li><a href="kontak.html">KONTAK</a></li>
@@ -280,7 +269,7 @@
 
 <button class="back-top" id="backTop" type="button" aria-label="Kembali ke atas"><span></span></button>
 
-<script src="assets/js/sprite.js?v=17"></script>
-<script src="assets/js/main.js?v=17"></script>
+<script src="assets/js/sprite.js?v=25"></script>
+<script src="assets/js/main.js?v=25"></script>
 </body>
 </html>

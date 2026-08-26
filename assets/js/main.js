@@ -6,6 +6,35 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Pengamat posisi gulir ----------
+     Beberapa fitur bergantung pada posisi gulir: latar header, bar progres,
+     tombol kembali ke atas, dan penanda bagian aktif. Semuanya didaftarkan
+     ke satu tempat agar tidak ada empat pendengar terpisah yang berjalan
+     sendiri-sendiri. Sengaja memakai peristiwa 'scroll', bukan
+     requestAnimationFrame — rAF dihentikan browser saat tab tidak terlihat,
+     sedangkan peristiwa scroll tetap terkirim. */
+  var pengamatGulir = [];
+  var sedangMenunggu = false;
+
+  function jalankanPengamat() {
+    sedangMenunggu = false;
+    for (var i = 0; i < pengamatGulir.length; i++) pengamatGulir[i]();
+  }
+
+  function amatiGulir(fn) {
+    pengamatGulir.push(fn);
+    fn();
+  }
+
+  window.addEventListener('scroll', function () {
+    // dikumpulkan dulu supaya tidak menghitung ulang berkali-kali dalam satu frame
+    if (sedangMenunggu) return;
+    sedangMenunggu = true;
+    requestAnimationFrame(jalankanPengamat);
+  }, { passive: true });
+
+  window.addEventListener('resize', jalankanPengamat);
+
   /* ---------- Loader (hanya ada di beranda) ----------
      Judul dipecah jadi satu elemen per karakter, masing-masing diberi
      nomor urut lewat --char-i. CSS memakai nomor itu untuk menunda
@@ -81,8 +110,7 @@
     var onScroll = function () {
       header.classList.toggle('is-stuck', window.scrollY > window.innerHeight * 0.85);
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    amatiGulir(onScroll);
   }
 
   /* ---------- Drawer: buka/tutup dengan circle clip ---------- */
@@ -337,14 +365,35 @@
     });
   }
 
+  /* ---------- Bar progres gulir ---------- */
+  var progress = document.getElementById('progress');
+  if (progress) {
+    var gambarProgres = function () {
+      var bisaDigulir = document.documentElement.scrollHeight - window.innerHeight;
+      var persen = bisaDigulir > 0 ? (window.scrollY / bisaDigulir) * 100 : 0;
+      progress.style.width = Math.min(100, Math.max(0, persen)) + '%';
+    };
+    window.addEventListener('resize', gambarProgres);
+    amatiGulir(gambarProgres);
+  }
+
+  /* ---------- Penanda halaman aktif di drawer ----------
+     Ditandai lewat JS supaya tidak perlu menyunting sembilan tautan
+     di setiap halaman secara manual — satu tempat, berlaku di mana saja. */
+  var berkasKini = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  document.querySelectorAll('.site-nav-drawer__list a').forEach(function (a) {
+    var tujuan = (a.getAttribute('href') || '').split('#')[0].toLowerCase();
+    if (!tujuan) tujuan = berkasKini;            // tautan yang hanya berisi #anchor
+    if (tujuan === berkasKini) a.setAttribute('aria-current', 'page');
+  });
+
   /* ---------- Kembali ke atas ---------- */
   var backTop = document.getElementById('backTop');
   if (backTop) {
     var toggleBack = function () {
       backTop.classList.toggle('is-show', window.scrollY > window.innerHeight * 0.6);
     };
-    window.addEventListener('scroll', toggleBack, { passive: true });
-    toggleBack();
+    amatiGulir(toggleBack);
     backTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
     });
@@ -372,8 +421,7 @@
           t.link.classList.toggle('is-active', t === current);
         });
       };
-      window.addEventListener('scroll', spy, { passive: true });
-      spy();
+      amatiGulir(spy);
     }
   }
 
