@@ -443,8 +443,24 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 }
 
 @media (max-width:900px){
-  .fv__yellow{ clip-path:none; opacity:.93; }
-  .fv__bars, .fv__mark{ display:none; }
+  /* Dulu kuning menutup penuh dengan opacity .93, dan awannya jadi tidak
+     terlihat sama sekali. Sekarang disisakan pita setinggi 120px di atas —
+     dipatok dalam piksel, bukan persen, supaya tidak ikut berubah mengikuti
+     tinggi section. Padding atas ditambah agar teks tetap jatuh di bidang kuning. */
+  .fv{ padding-top:calc(var(--header-h) + 132px); }
+  .fv__yellow{
+    opacity:1;
+    clip-path:polygon(
+      0 120px, 38% 120px, 38% 88px, 62% 88px,
+      62% 150px, 100% 150px, 100% 100%, 0 100%);
+  }
+  .fv__bars{ display:block; }
+  .fv__bars i:nth-child(1){ top:26px; left:5%;  width:52%; height:9px; }
+  .fv__bars i:nth-child(2){ top:46px; left:44%; width:34%; height:5px; }
+  .fv__bars i:nth-child(3){ top:64px; left:11%; width:46%; height:11px; }
+  .fv__bars i:nth-child(4){ top:92px; left:56%; width:26%; height:5px; }
+  .fv__bars i:nth-child(5){ display:none; }
+  .fv__mark{ display:none; }
 }
 /* ---------- 7. ORNAMEN & KEYFRAME BERSAMA ----------
    Dipakai lintas bagian: ABOUT, hero halaman anak, 404, dan panel arsitektur.
@@ -1375,8 +1391,21 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 .about__card--down{ margin-top:26px; border-color:var(--c-cyan); }
 
 @media (max-width:900px){
-  .about__yellow{ clip-path:none; opacity:.94; }
-  .about__bars,
+  /* Alasan sama seperti pada hero: pita langit dipatok dalam piksel
+     supaya tinggi section yang berubah-ubah tidak menggesernya. */
+  .about{ padding-top:150px; }
+  .about__yellow{
+    opacity:1;
+    clip-path:polygon(
+      0 104px, 42% 104px, 42% 74px, 66% 74px,
+      66% 134px, 100% 134px, 100% 100%, 0 100%);
+  }
+  .about__bars{ display:block; }
+  .about__bars i:nth-child(1){ top:22px; left:6%;  width:50%; height:8px; }
+  .about__bars i:nth-child(2){ top:40px; left:46%; width:32%; height:5px; }
+  .about__bars i:nth-child(3){ top:56px; left:12%; width:44%; height:10px; }
+  .about__bars i:nth-child(4){ top:80px; left:58%; width:28%; height:5px; }
+  .about__bars i:nth-child(n+5){ display:none; }
   .about__mark{ display:none; }
   .about__card--up,
   .about__card--down{ margin-top:0; }
