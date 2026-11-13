@@ -18,8 +18,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=35">
-<link rel="stylesheet" href="assets/css/page.css?v=35">
+<link rel="stylesheet" href="assets/css/style.css?v=37">
+<link rel="stylesheet" href="assets/css/page.css?v=37">
 </head>
 <body>
 
@@ -75,7 +75,7 @@
   <p class="page-hero__label">WORKS</p>
   <h1 class="page-hero__title"><span class="glitch" data-text="PROYEK">PROYEK</span></h1>
   <p class="page-hero__sub">
-    Lima proyek. Dua dikerjakan bertim, tiga sendirian.
+    Lima proyek. Tiga dikerjakan bertim, dua sendirian.
   </p>
 </section>
 
@@ -269,51 +269,66 @@
         <svg class="cat__art" viewBox="0 0 400 300" aria-hidden="true"><use href="#art-ui"/></svg>
         <span class="cat__num">04</span>
         <div class="cat__titles">
-          <p class="cat__en">PROYEK KULIAH · 2026 · MANDIRI</p>
+          <p class="cat__en">PROJECT CAPSTONE · 2026 · TIM</p>
           <h2 class="cat__id">KAMPUSHUB</h2>
         </div>
       </div>
 
       <div class="proj" data-reveal>
         <ul class="proj__meta">
-          <li><b>Peran saya</b><span>Dikerjakan sendiri, frontend sampai backend</span></li>
-          <li><b>Arsitektur</b><span>React 19 + Firebase</span></li>
+          <li><b>Mata kuliah</b><span>Project Capstone, Teknik Informatika UIR</span></li>
+          <li><b>Peran saya</b><span>Frontend dan UI/UX</span></li>
+          <li><b>Arsitektur</b><span>React 19 + Supabase</span></li>
+          <li><b>Status</b><span>Sudah tayang di kampushub.my.id</span></li>
+          <li><b>Versi awal</b><span>Saya kerjakan sendiri dengan Firebase, lalu dilanjutkan bertim</span></li>
         </ul>
 
         <h3 class="proj__h">Masalahnya</h3>
         <p class="proj__p">
-          Informasi acara kampus tersebar di mana-mana: grup WhatsApp, Instagram himpunan,
-          poster di mading. Banyak yang melewatkan seminar atau lomba cuma karena tidak
-          sempat lihat pengumumannya.
+          Informasi acara kampus tersebar di grup WhatsApp, Instagram himpunan, dan poster
+          di mading, jadi banyak yang melewatkan seminar atau lomba. Pendaftaran biasanya
+          lewat formulir yang direkap manual, kehadiran dicatat dengan tanda tangan, dan
+          bukti transfer untuk acara berbayar dicocokkan satu per satu.
         </p>
 
-        <h3 class="proj__h">Yang saya bangun</h3>
+        <h3 class="proj__h">Yang kami bangun</h3>
         <p class="proj__p">
-          Satu tempat untuk semua acara kampus, lengkap dengan RSVP dan e-tiket QR yang
-          langsung terbit begitu mendaftar. Panitia tinggal memindai tiketnya lewat kamera
-          ponsel. Ada tiga peran: mahasiswa, panitia, dan admin yang menyetujui pengajuan
-          acara.
+          Satu tempat untuk semua acara kampus. Peserta mendaftar dan langsung mendapat
+          e-tiket QR, panitia memindainya lewat kamera ponsel saat check-in. Kalau kuota
+          penuh, pendaftar masuk daftar tunggu. Acara berbayar dibayar lewat Midtrans, dan
+          sertifikat diterbitkan dari aplikasi setelah acara selesai. Ada tiga peran:
+          mahasiswa, panitia, dan admin yang menyetujui pengajuan acara.
+        </p>
+
+        <h3 class="proj__h">Bagian saya</h3>
+        <p class="proj__p">
+          Saya mengerjakan frontend dan UI/UX: rancangan tampilan aplikasi untuk layar
+          desktop dan ponsel, dibuat dengan React, TypeScript, dan Tailwind.
         </p>
 
         <div class="proj__gallery">
-          <figure><img src="assets/img/projects/kampushub-960.jpg" alt="Beranda KampusHub" loading="lazy"><figcaption>Beranda dan daftar acara</figcaption></figure>
+          <figure><img src="assets/img/projects/kampushub-beranda.jpg" alt="Beranda KampusHub" loading="lazy"><figcaption>Beranda</figcaption></figure>
+          <figure><img src="assets/img/projects/kampushub-dasbor.jpg" alt="Dasbor manajemen KampusHub" loading="lazy"><figcaption>Dasbor manajemen untuk admin</figcaption></figure>
+          <figure class="is-hp"><img src="assets/img/projects/kampushub-detail-hp.jpg" alt="Halaman detail event di ponsel" loading="lazy"><figcaption>Detail event di ponsel</figcaption></figure>
         </div>
 
         <p class="proj__label">TEKNOLOGI</p>
         <ul class="proj__stack">
           <li class="tag">React 19</li><li class="tag">TypeScript</li><li class="tag">React Router</li>
           <li class="tag">Vite</li><li class="tag">Tailwind CSS v4</li><li class="tag">Framer Motion</li>
-          <li class="tag">Firebase Auth</li><li class="tag">Cloud Firestore</li>
+          <li class="tag">Supabase</li><li class="tag">PostgreSQL</li><li class="tag">Midtrans</li>
           <li class="tag">html5-qrcode</li><li class="tag">qrcode.react</li>
         </ul>
 
         <div class="callout callout--note">
           <p class="callout__t">CATATAN</p>
-          <p>Sistem ini belum pernah dipakai di acara kampus sungguhan. Statusnya masih purwarupa.</p>
+          <p>Sudah tayang di kampushub.my.id. Pendaftaran Milad IT Fest 19 (10 Desember 2026) dibuka lewat aplikasi ini.</p>
         </div>
 
         <div class="proj__links">
-          <a class="btn-more" href="https://github.com/RifqiPermanaPutra/EventHub-Kampus" target="_blank" rel="noopener"><span>REPOSITORI</span></a>
+          <a class="btn-guide" href="https://kampushub.my.id" target="_blank" rel="noopener">LIHAT VERSI TAYANG</a>
+          <a class="btn-more" href="https://github.com/bintanghendriska/KampusHub" target="_blank" rel="noopener"><span>REPOSITORI CAPSTONE</span></a>
+          <a class="btn-more" href="https://github.com/RifqiPermanaPutra/EventHub-Kampus" target="_blank" rel="noopener"><span>VERSI AWAL</span></a>
         </div>
       </div>
     </section>
@@ -398,7 +413,7 @@
 
 <button class="back-top" id="backTop" type="button" aria-label="Kembali ke atas"><span></span></button>
 
-<script src="assets/js/sprite.js?v=35"></script>
-<script src="assets/js/main.js?v=35"></script>
+<script src="assets/js/sprite.js?v=37"></script>
+<script src="assets/js/main.js?v=37"></script>
 </body>
 </html>
