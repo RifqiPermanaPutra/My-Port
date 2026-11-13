@@ -1469,47 +1469,159 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .skill-list li em{ white-space:normal; }
 }
 
-/* ---------- 27b. KEAHLIAN RINGKAS ----------
-   Empat kelompok, masing-masing cukup nama dan deretan chip.
-   Satu kolom di ponsel, dua kolom mulai 700px. */
-.skills{
-  display:grid; gap:14px;
-  max-width:1100px; margin:0 auto;
+/* ---------- 27b. PANEL KEAHLIAN ----------
+   Panel biru miring di atas latar gelap: garis pindai, bentuk awan gelap,
+   kartu keahlian yang ditempel miring, dan teks rata kanan di sisi lain.
+   Di ponsel semuanya ditumpuk: teks dulu, lalu kartu. */
+.skl{
+  position:relative; overflow:hidden;
+  background:var(--c-darker);
+  padding:clamp(56px,8vw,110px) clamp(12px,3vw,40px);
 }
-@media (min-width:700px){
-  .skills{ grid-template-columns:1fr 1fr; gap:20px; }
+.skl__panel{
+  position:relative; isolation:isolate;
+  max-width:1320px; margin:0 auto;
+  padding:clamp(40px,6vw,84px) clamp(22px,4.5vw,72px);
+  color:var(--c-white);
 }
-.skill-group{
+/* dua lapis bentuk: bayangan biru tua di belakang, panel biru di depan */
+.skl__panel::before,
+.skl__panel::after{
+  content:""; position:absolute; z-index:-2;
+  border-radius:clamp(26px,4.5vw,56px);
+}
+.skl__panel::before{
+  inset:-10px -6px 6px 8px;
+  background:#16799F;
+  transform:rotate(-1.4deg);
+}
+.skl__panel::after{
+  inset:0; z-index:-1;
+  background:
+    radial-gradient(38% 34% at 96% 6%,  rgba(10,82,120,.42), transparent 72%),
+    radial-gradient(30% 30% at 58% 100%, rgba(10,82,120,.38), transparent 72%),
+    radial-gradient(26% 38% at 0% 62%,   rgba(10,82,120,.34), transparent 72%),
+    radial-gradient(22% 26% at 40% 0%,   rgba(255,255,255,.14), transparent 70%),
+    #29A7D8;
+  transform:rotate(.5deg);
+}
+.skl__scan{
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
+  border-radius:clamp(26px,4.5vw,56px);
+  background:repeating-linear-gradient(0deg, rgba(255,255,255,.09) 0 1px, transparent 1px 5px);
+  transform:rotate(.5deg);
+}
+
+/* cincin dan bintang kecil berwarna cyan terang */
+.skl__deco i{ position:absolute; z-index:0; display:block; pointer-events:none; }
+.skl__ring{ border:5px solid var(--c-cyan); border-radius:50%; }
+.skl__ring--a{ top:16%; left:1.5%; width:44px; height:44px; }
+.skl__ring--b{ bottom:20%; left:46%; width:34px; height:34px; border-width:4px; }
+.skl__star{
+  background:var(--c-cyan);
+  clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);
+}
+.skl__star--a{ top:44%; left:2%;  width:30px; height:30px; }
+.skl__star--b{ bottom:5%; left:38%; width:36px; height:36px; }
+.skl__star--c{ top:9%;  right:30%; width:20px; height:20px; }
+
+/* siluet kuning di tengah bawah */
+.skl__sil{
+  position:absolute; z-index:0; pointer-events:none;
+  left:55.5%; bottom:clamp(20px,4vw,56px);
+  width:clamp(130px,15vw,210px);
+  transform:translateX(-50%);
+  color:var(--c-yellow);
+}
+.skl__sil svg{ width:100%; height:auto; }
+
+.skl__inner{
+  position:relative; z-index:1;
+  display:grid; align-items:center;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(40px,15vw,210px);
+}
+
+/* kartu keahlian: ditempel miring dengan bingkai kuning */
+.skl__cards{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(14px,2vw,22px); align-items:start;
+}
+.skl-card{
   position:relative;
-  padding:clamp(22px,4vw,34px);
-  background:var(--c-white); color:var(--c-ink);
-  border:3px solid var(--c-ink);
-  box-shadow:6px 6px 0 var(--c-ink);
-}
-.skill-group--key{
+  padding:22px 18px 20px;
   background:var(--c-ink); color:var(--c-white);
-  padding-top:clamp(40px,5vw,50px);
+  border:4px solid var(--c-yellow); border-radius:14px;
+  box-shadow:0 14px 30px rgba(0,40,70,.4);
+  transition:transform .35s var(--ease);
 }
-.skill-group__flag{
+.skl-card:nth-child(1){ transform:rotate(-2deg); }
+.skl-card:nth-child(2){ transform:rotate(1.6deg) translateY(18px); }
+.skl-card:nth-child(3){ transform:rotate(1.2deg); }
+.skl-card:nth-child(4){ transform:rotate(-1.4deg) translateY(14px); }
+.skl-card:hover{ transform:rotate(0) scale(1.03); z-index:2; }
+.skl-card--key{ padding-top:44px; }
+.skl-card__flag{
   position:absolute; top:0; left:0;
   padding:7px 18px 7px 14px;
   background:var(--c-cyan); color:var(--c-ink);
+  border-top-left-radius:9px;
   font-family:var(--f-display); font-weight:800;
-  font-size:10px; letter-spacing:.22em; line-height:1.4;
+  font-size:10px; letter-spacing:.2em; line-height:1.4;
   clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);
 }
-.skill-group__name{
+.skl-card__name{
   font-family:var(--f-display); font-weight:900;
-  font-size:clamp(18px,2.4vw,24px); line-height:1.2; letter-spacing:.04em;
-  margin-bottom:16px;
+  font-size:clamp(15px,1.5vw,19px); line-height:1.25; letter-spacing:.05em;
+  color:var(--c-yellow); margin-bottom:14px;
 }
-.skill-group--key .skill-group__name{ color:var(--c-yellow); }
-.skill-chips{ display:flex; flex-wrap:wrap; gap:8px; }
+.skill-chips{ display:flex; flex-wrap:wrap; gap:7px; }
 .skill-chips li{
-  padding:7px 13px;
-  border:2px solid currentColor;
+  padding:5px 10px;
+  border:2px solid rgba(255,255,255,.75);
   font-family:var(--f-display); font-weight:700;
-  font-size:12px; letter-spacing:.06em; line-height:1.4;
+  font-size:11px; letter-spacing:.05em; line-height:1.4;
+}
+
+/* teks rata kanan */
+.skl__copy{ text-align:right; }
+.skl__label{
+  font-family:var(--f-display); font-weight:900;
+  font-size:clamp(24px,3.6vw,44px); line-height:1.1; letter-spacing:.14em;
+  color:var(--c-yellow); margin-bottom:22px;
+}
+.skl__label small{
+  display:block; margin-bottom:8px;
+  font-size:clamp(11px,1.1vw,14px); font-weight:800; letter-spacing:.3em;
+}
+.skl__head{
+  font-family:var(--f-display); font-weight:800;
+  font-size:clamp(20px,2.7vw,36px); line-height:1.3; margin-bottom:22px;
+}
+.skl__head .hl{ box-shadow:-7px 7px 0 var(--c-ink); border:0; white-space:normal; }
+.skl__body{ font-size:clamp(14px,1.25vw,16px); line-height:2; margin-left:auto; max-width:40ch; }
+.skl__u{ font-weight:700; border-bottom:3px solid var(--c-yellow); padding-bottom:1px; }
+
+@media (max-width:900px){
+  .skl__inner{ grid-template-columns:1fr; gap:34px; }
+  .skl__copy{ order:-1; text-align:left; }
+  .skl__body{ margin-left:0; }
+  .skl__head .hl{ box-shadow:-5px 5px 0 var(--c-ink); }
+  .skl__sil{
+    left:auto; right:16px; top:26px; bottom:auto;
+    width:92px; transform:none;
+  }
+  .skl__ring--a{ top:auto; bottom:3%; left:auto; right:6%; }
+  .skl__ring--b,
+  .skl__star--c{ display:none; }
+  .skl__star--a{ top:auto; bottom:40%; left:-6px; }
+  .skl__star--b{ left:auto; right:26%; bottom:1.2%; }
+}
+@media (max-width:560px){
+  .skl__cards{ grid-template-columns:1fr; gap:18px; }
+  .skl-card:nth-child(n){ transform:rotate(-1deg); }
+  .skl-card:nth-child(even){ transform:rotate(1deg); }
+  .skill-chips li{ font-size:12px; padding:6px 11px; }
 }
 
 /* ---------- 28. FIGUR ARSITEKTUR ---------- */

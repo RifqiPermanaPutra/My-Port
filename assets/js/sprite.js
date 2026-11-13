@@ -116,6 +116,23 @@
   '</g>' +
 
   /* kilau / percikan AI */
+  /* siluet polos: orang duduk bekerja di depan monitor (warna ikut currentColor) */
+  '<g id="sil-dev" fill="currentColor">' +
+    '<circle cx="80" cy="92" r="26"/>' +
+    '<path d="M50 132 Q80 110 110 132 L118 214 L46 214 Z"/>' +
+    '<path d="M98 138 L154 188 L144 204 L84 162 Z"/>' +
+    '<rect x="48" y="204" width="92" height="24" rx="11"/>' +
+    '<rect x="118" y="214" width="22" height="76" rx="10"/>' +
+    '<rect x="26" y="118" width="12" height="114" rx="5"/>' +
+    '<rect x="26" y="226" width="86" height="11" rx="5"/>' +
+    '<rect x="62" y="236" width="10" height="54" rx="4"/>' +
+    '<rect x="152" y="86" width="122" height="84" rx="9"/>' +
+    '<rect x="206" y="168" width="14" height="34" />' +
+    '<rect x="182" y="198" width="62" height="10" rx="5"/>' +
+    '<rect x="112" y="206" width="180" height="12" rx="4"/>' +
+    '<rect x="270" y="216" width="10" height="74" rx="4"/>' +
+  '</g>' +
+
   '<g id="art-spark">' +
     '<path d="M200 60 L222 150 L312 172 L222 194 L200 284 L178 194 L88 172 L178 150 Z" fill="#FFF300" stroke="#111" stroke-width="8" stroke-linejoin="round"/>' +
     '<path d="M300 74 L310 108 L344 118 L310 128 L300 162 L290 128 L256 118 L290 108 Z" fill="#00DEFF" stroke="#111" stroke-width="6" stroke-linejoin="round"/>' +
