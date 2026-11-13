@@ -321,7 +321,9 @@
   wireTablist('.pkg__tabs', '.pkg__tab');
   wireTablist('#bannerPager', '.banner__bullet');
 
-  /* ---------- Formulir reservasi (peraga, tidak mengirim apa pun) ---------- */
+  /* ---------- Formulir kontak ----------
+     Situs ini statis dan tidak punya server, jadi isian formulir disusun
+     menjadi draf email lalu dibuka di aplikasi email pengunjung (mailto). */
   var form = document.getElementById('reserveForm');
   if (form) {
     var msg = document.getElementById('formMsg');
@@ -340,8 +342,18 @@
         msg.textContent = 'Lengkapi dulu: ' + nama.join(', ') + '.';
         kosong[0].focus();
       } else {
+        var isi = function (n) { return (form.elements[n].value || '').trim(); };
+        var subjek = '[Portofolio] ' + isi('keperluan') + ' — ' + isi('nama');
+        var badan = 'Nama: ' + isi('nama') + '\n' +
+                    'Kontak: ' + isi('kontak') + '\n' +
+                    'Keperluan: ' + isi('keperluan') + '\n\n' +
+                    isi('pesan');
+        window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
+          '?subject=' + encodeURIComponent(subjek) +
+          '&body=' + encodeURIComponent(badan);
+
         msg.className = 'form__msg';
-        msg.textContent = 'Peraga desain — permintaan tidak dikirim ke mana pun.';
+        msg.textContent = 'Draf email sudah dibuka di aplikasi email Anda. Tekan kirim di sana.';
       }
     });
   }
@@ -423,6 +435,20 @@
       };
       amatiGulir(spy);
     }
+  }
+
+  /* ---------- Bilah loncat: sembunyi saat turun, muncul saat naik ----------
+     Hanya berefek di ponsel (CSS-nya ada di dalam media query). Ambang 8px
+     mencegah bilah berkedip karena getaran kecil saat jari menahan layar. */
+  var bilahLoncat = document.querySelector('.anchors');
+  if (bilahLoncat) {
+    var yTerakhir = window.scrollY;
+    amatiGulir(function () {
+      var y = window.scrollY;
+      if (Math.abs(y - yTerakhir) < 8) return;
+      bilahLoncat.classList.toggle('is-tucked', y > yTerakhir && y > 200);
+      yTerakhir = y;
+    });
   }
 
   /* ---------- Parallax ringan pada bentuk hero ---------- */

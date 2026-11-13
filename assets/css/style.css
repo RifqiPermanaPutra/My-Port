@@ -547,6 +547,37 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 .btn-more--dark:hover{ background:var(--c-cyan); color:var(--c-ink); }
 .btn-more--wide{ margin:40px auto 0; display:flex; justify-content:center; width:min(420px,100%); }
 
+/* tombol utama — blok cyan dengan bayangan keras. Satu-satunya tombol
+   berwarna cyan saat diam, supaya jelas mana aksi utama di tiap bagian. */
+.btn-guide{
+  display:inline-flex; align-items:center; justify-content:center; gap:12px;
+  margin-top:30px; padding:14px 34px;
+  background:var(--c-cyan); color:var(--c-ink);
+  border:3px solid var(--c-ink);
+  box-shadow:5px 5px 0 var(--c-ink);
+  font-family:var(--f-display); font-weight:800;
+  font-size:12px; letter-spacing:var(--ls-label); line-height:1.4;
+  transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+}
+.btn-guide::after{ content:"→"; transition:transform .3s var(--ease); }
+.btn-guide:hover{
+  transform:translate(3px,3px);
+  box-shadow:2px 2px 0 var(--c-ink);
+  background:var(--c-yellow);
+}
+.btn-guide:hover::after{ transform:translateX(5px); }
+/* di atas latar gelap, garis dan bayangan hitam tidak terlihat */
+.tengahmalam .btn-guide,
+.page-body--dark .btn-guide{
+  border-color:var(--c-yellow);
+  box-shadow:5px 5px 0 var(--c-yellow);
+}
+.tengahmalam .btn-guide:hover,
+.page-body--dark .btn-guide:hover{
+  box-shadow:2px 2px 0 var(--c-yellow);
+  background:var(--c-white);
+}
+
 /* tombol play */
 .btn-play{
   display:inline-flex; align-items:center; gap:16px;
@@ -1438,6 +1469,49 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .skill-list li em{ white-space:normal; }
 }
 
+/* ---------- 27b. KEAHLIAN RINGKAS ----------
+   Empat kelompok, masing-masing cukup nama dan deretan chip.
+   Satu kolom di ponsel, dua kolom mulai 700px. */
+.skills{
+  display:grid; gap:14px;
+  max-width:1100px; margin:0 auto;
+}
+@media (min-width:700px){
+  .skills{ grid-template-columns:1fr 1fr; gap:20px; }
+}
+.skill-group{
+  position:relative;
+  padding:clamp(22px,4vw,34px);
+  background:var(--c-white); color:var(--c-ink);
+  border:3px solid var(--c-ink);
+  box-shadow:6px 6px 0 var(--c-ink);
+}
+.skill-group--key{
+  background:var(--c-ink); color:var(--c-white);
+  padding-top:clamp(40px,5vw,50px);
+}
+.skill-group__flag{
+  position:absolute; top:0; left:0;
+  padding:7px 18px 7px 14px;
+  background:var(--c-cyan); color:var(--c-ink);
+  font-family:var(--f-display); font-weight:800;
+  font-size:10px; letter-spacing:.22em; line-height:1.4;
+  clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);
+}
+.skill-group__name{
+  font-family:var(--f-display); font-weight:900;
+  font-size:clamp(18px,2.4vw,24px); line-height:1.2; letter-spacing:.04em;
+  margin-bottom:16px;
+}
+.skill-group--key .skill-group__name{ color:var(--c-yellow); }
+.skill-chips{ display:flex; flex-wrap:wrap; gap:8px; }
+.skill-chips li{
+  padding:7px 13px;
+  border:2px solid currentColor;
+  font-family:var(--f-display); font-weight:700;
+  font-size:12px; letter-spacing:.06em; line-height:1.4;
+}
+
 /* ---------- 28. FIGUR ARSITEKTUR ---------- */
 .special__cap{
   max-width:56ch; margin:0 auto 24px;
@@ -1807,4 +1881,66 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .sig-thumb__name{ font-size:11px; }
   /* tautan di tabel profil sudah 40px, dinaikkan sedikit agar nyaman */
   .spec__link{ padding:10px 0; }
+}
+
+/* ---------- 38. FOTO DIRI DI HERO ----------
+   Kartu foto miring dengan bayangan cyan, menempati area langit.
+   Di ponsel ia duduk di pita langit atas dan sedikit menjorok ke bidang kuning. */
+.fv__photo{
+  position:absolute; z-index:0; margin:0;
+  top:50%; right:clamp(24px,7vw,120px);
+  width:clamp(220px,24vw,360px);
+  transform:translateY(-50%) rotate(4deg);
+  border:6px solid var(--c-ink);
+  box-shadow:12px 12px 0 var(--c-cyan);
+  background:var(--c-ink);
+}
+.fv__photo img{
+  display:block; width:100%; height:auto;
+  aspect-ratio:3/4; object-fit:cover;
+}
+@media (max-width:900px){
+  .fv{ padding-top:calc(var(--header-h) + 178px); }
+  .fv__photo{
+    top:calc(var(--header-h) + 12px); right:22px;
+    width:112px;
+    transform:rotate(5deg);
+    border-width:4px;
+    box-shadow:6px 6px 0 var(--c-cyan);
+  }
+}
+
+/* ---------- 39. PENYESUAIAN PONSEL LANJUTAN ---------- */
+
+/* Bilah loncat menyelinap ke balik header saat menggulir turun dan
+   kembali saat menggulir naik, supaya tidak terus memakan tinggi layar. */
+@media (max-width:750px){
+  .anchors{ transition:transform .3s var(--ease); }
+  .anchors.is-tucked{ transform:translateY(-115%); }
+
+  /* tombol header tidak boleh patah jadi dua baris */
+  .btn-reserve{ white-space:nowrap; padding-inline:14px; letter-spacing:.14em; }
+
+  /* pemilih proyek: satu baris yang bisa digeser, bukan 4 + 1 */
+  .sig-tabs{
+    flex-wrap:nowrap; justify-content:flex-start;
+    gap:14px; overflow-x:auto;
+    margin-inline:calc(var(--pad-x) * -1);
+    padding:8px var(--pad-x) 6px;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+  }
+  .sig-tabs::-webkit-scrollbar{ display:none; }
+  .sig-thumb{ flex:none; width:78px; scroll-snap-align:center; }
+}
+@media (prefers-reduced-motion:reduce){
+  .anchors{ transition:none; }
+}
+
+/* kisi istilah: 4 kartu dibagi 2×2 atau 4 sejajar, tidak pernah 3 + 1 */
+@media (min-width:620px) and (max-width:1099px){
+  .kw__grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (min-width:1100px){
+  .kw__grid{ grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
