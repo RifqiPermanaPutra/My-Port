@@ -13,7 +13,8 @@ tanpa framework maupun dependensi.
 |---|---|
 | `index.html` | Beranda — tentang saya, dua bidang fokus, istilah teknis, lima proyek, keahlian, profil |
 | `proyek.html` | Rincian lima proyek: masalah, solusi, tumpukan teknologi, dan hasilnya |
-| `perjalanan.html` | Linimasa pendidikan, magang, dan organisasi |
+| `perjalanan.html` | Linimasa pendidikan, kerja praktik, dan organisasi |
+| `organisasi.html` | Dua periode di Divisi Kominfo HIMATIF UIR |
 | `kontak.html` | Tautan kontak dan formulir |
 | `404.html` | Halaman tidak ditemukan |
 
